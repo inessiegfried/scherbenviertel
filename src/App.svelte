@@ -1,5 +1,5 @@
 <div id="layout">
-  <nav>Navbar</nav>
+  <nav></nav>
   <aside>
     <ul id="menu">
       <li><a href="#">Scherbenviertel</a></li>
@@ -10,7 +10,7 @@
     </ul>
   </aside>
   <main>
-    <h1>Svelte Playground</h1>
+    <h1></h1>
   </main>
   <footer>Scherbenviertel - Ines Siegfried</footer>
 </div>
@@ -52,7 +52,7 @@
   nav {
     height: var(--header-height);
     grid-area: navbar;
-    background-color: green;
+    background-color: var(--purple);
   }
   
   aside {
