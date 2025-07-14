@@ -1,16 +1,48 @@
+<script>
+  import Router, { link, push } from 'svelte-spa-router';
+  import { location } from 'svelte-spa-router';
+  
+  import Home from './pages/Home.svelte';
+  import Scherbenviertel from './pages/Scherbenviertel.svelte';
+  import Lesungen from './pages/Lesungen.svelte';
+  import Gedanken from './pages/Gedanken.svelte';
+  import Vita from './pages/Vita.svelte';
+  import Kontakt from './pages/Kontakt.svelte';
+  
+  const routes = {
+    '/': Home,
+    '/scherbenviertel': Scherbenviertel,
+    '/lesungen': Lesungen,
+    '/gedanken': Gedanken,
+    '/vita': Vita,
+    '/kontakt': Kontakt
+  };
+  
+  const pageNames = {
+    '/': 'Startseite',
+    '/scherbenviertel': 'Scherbenviertel',
+    '/lesungen': 'Lesungen',
+    '/gedanken': 'Gedanken & Geschichten',
+    '/vita': 'Vita',
+    '/kontakt': 'Kontakt'
+  };
+  
+  $: currentPageName = pageNames[$location] || 'Startseite';
+</script>
+
 <div id="layout">
-  <nav></nav>
+  <nav>{currentPageName}</nav>
   <aside>
     <ul id="menu">
-      <li><a href="#">Scherbenviertel</a></li>
-      <li><a href="#">Lesungen</a></li>
-      <li><a href="#">Gedanken und Geschichten</a></li>
-      <li><a href="#">Vita</a></li>
-      <li><a href="#">Kontakt</a></li>
+      <li><a href="/scherbenviertel" use:link>Scherbenviertel</a></li>
+      <li><a href="/lesungen" use:link>Lesungen</a></li>
+      <li><a href="/gedanken" use:link>Gedanken und Geschichten</a></li>
+      <li><a href="/vita" use:link>Vita</a></li>
+      <li><a href="/kontakt" use:link>Kontakt</a></li>
     </ul>
   </aside>
   <main>
-    <h1></h1>
+    <Router {routes} />
   </main>
   <footer>Scherbenviertel - Ines Siegfried</footer>
 </div>
@@ -33,7 +65,7 @@
     font-size: var(--font-size);
     background: radial-gradient(circle at center, var(--purple-dark), var(--purple-darker));
     display: grid;
-    grid-template-columns: 1fr 300px;
+    grid-template-columns: 1fr 240px;
     grid-template-rows: auto 1fr auto;
     grid-template-areas: 
     "navbar navbar"
@@ -47,12 +79,18 @@
     overflow-y: scroll;
     /* Hier muss ich die Höhe berechnen lassen damit das Scolling richtig funktioniert. */
     max-height: calc(100vh - var(--header-height) - var(--footer-height));
+    padding: 2rem;
   }
 
   nav {
     height: var(--header-height);
     grid-area: navbar;
     background-color: var(--purple);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.2em;
   }
   
   aside {
