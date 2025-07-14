@@ -26,13 +26,19 @@
     '/vita': 'Vita',
     '/kontakt': 'Kontakt'
   };
+
+  function toggleMenu() {
+    console.log("Toogle Menu")
+    const sideMenu = document.getElementById("side-menu")
+  }
   
   $: currentPageName = pageNames[$location] || 'Startseite';
 </script>
 
 <div id="layout">
   <nav>{currentPageName}</nav>
-  <aside>
+  <button id="menu-button" on:click={toggleMenu}></button>
+  <aside id="side-menu">
     <ul id="menu">
       <li><a href="/scherbenviertel" use:link>Scherbenviertel</a></li>
       <li><a href="/lesungen" use:link>Lesungen</a></li>
@@ -154,6 +160,47 @@
   #menu > li > a {
     color: inherit;
     text-decoration: none;
+  }
+
+  @media (min-width: 800px) {
+    #layout {
+      grid-template-columns: 1fr 2fr;
+      grid-template-areas: 
+        "navbar main"
+        "footer footer";
+      grid-template-rows: 1fr auto;
+    }
+
+    nav {
+      height: 100%;
+    }
+
+    nav::before {
+      content: "";
+      display: block;
+      position: relative;
+      height: 100%;
+      width: 60px;
+      background-color: var(--purple-light);
+    }
+
+    aside {
+      position: fixed;
+      display: none;
+    }
+
+    #menu-button {
+      display: block;
+      position: fixed;
+      width: 60px;
+      height: 100px;
+      background-color: var(--purple-light);
+      top: 0;
+      right: 10%;
+      border: none;
+    }
+
+
   }
 
 
