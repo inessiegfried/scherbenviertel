@@ -33,6 +33,10 @@
     isMenuOpen = !isMenuOpen;
   }
 
+  function closeMenu() {
+    isMenuOpen = false;
+  }
+
   $: currentPageName = pageNames[$location] || "Startseite";
 </script>
 
@@ -41,11 +45,11 @@
   <button id="menu-button" on:click={toggleMenu}></button>
   <aside id="side-menu" class:open={isMenuOpen}>
     <ul id="menu">
-      <li><a href="/scherbenviertel" use:link>Scherbenviertel</a></li>
-      <li><a href="/lesungen" use:link>Lesungen</a></li>
-      <li><a href="/gedanken" use:link>Gedanken und Geschichten</a></li>
-      <li><a href="/vita" use:link>Vita</a></li>
-      <li><a href="/kontakt" use:link>Kontakt</a></li>
+      <li><a href="/scherbenviertel" use:link on:click={closeMenu}>Scherbenviertel</a></li>
+      <li><a href="/lesungen" use:link on:click={closeMenu}>Lesungen</a></li>
+      <li><a href="/gedanken" use:link on:click={closeMenu}>Gedanken und Geschichten</a></li>
+      <li><a href="/vita" use:link on:click={closeMenu}>Vita</a></li>
+      <li><a href="/kontakt" use:link on:click={closeMenu}>Kontakt</a></li>
     </ul>
   </aside>
   <main>
