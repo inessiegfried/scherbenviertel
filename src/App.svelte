@@ -84,6 +84,33 @@
     justify-content: center;
     height: 100%;
     gap: 0.5rem;
+    list-style: none;
+    padding: 0;
+  }
+
+  #menu > li {
+    position: relative;
+    padding-left: 1.5rem;
+  }
+
+  #menu > li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-left: 8px solid var(--purple-light);
+    border-top: 6px solid transparent;
+    border-bottom: 6px solid transparent;
+    transition: all 0.3s ease;
+  }
+
+  #menu > li:hover::before {
+    border-left-width: 12px;
+    border-top-width: 9px;
+    border-bottom-width: 9px;
   }
 
   #menu > li > a {
