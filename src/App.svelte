@@ -11,16 +11,23 @@
   :root{
     --header-height: 60px;
     --footer-height: 30px;
+    --purple-darker: #231C45;
+    --purple-dark: #753268;
+    --purple: #8F0E52;
+    --purple-light: #A91060;
+    --white: #EBEBEB;
+    --black: #000000;
   }
-
+  
   #layout {
+    background: radial-gradient(circle at center, var(--purple-dark), var(--purple-darker));
     display: grid;
-    grid-template-columns: 300px 1fr;
+    grid-template-columns: 1fr 300px;
     grid-template-rows: auto 1fr auto;
     grid-template-areas: 
-      "navbar navbar"
-      "aside main"
-      "footer footer";
+    "navbar navbar"
+    "main aside"
+    "footer footer";
     min-height: 100vh;
   }
   main {
@@ -38,7 +45,6 @@
   
   aside {
     grid-area: aside;
-    background-color: yellow;
   }
   
   footer {
