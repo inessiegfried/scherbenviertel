@@ -55,9 +55,14 @@
 </div>
 
 <style>
+
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+
   :root {
     --header-height: 60px;
-    --footer-height: 30px;
+    --footer-height: 46px;
     --purple-darker: #231c45;
     --purple-dark: #753268;
     --purple: #8f0e52;
@@ -76,12 +81,12 @@
       var(--purple-darker)
     );
     display: grid;
-    grid-template-columns: 1fr 240px;
+    grid-template-columns: 1fr;
     grid-template-rows: auto 1fr auto;
     grid-template-areas:
-      "navbar navbar"
-      "main aside"
-      "footer footer";
+      "navbar"
+      "main"
+      "footer";
     min-height: 100vh;
   }
 
@@ -102,6 +107,7 @@
     justify-content: center;
     font-weight: bold;
     font-size: 1.2em;
+    z-index: 1002;
   }
 
   aside {
@@ -174,10 +180,23 @@
     height: 60px;
     background-color: var(--purple);
     top: var(--header-height);
-    right: 10%;
+    right: 5%;
     border: none;
     cursor: pointer;
     z-index: 1001;
+  }
+
+  #menu-button::before {
+    content: "";
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 30px solid var(--purple);
+    border-right: 30px solid var(--purple);
+    border-bottom: 20px solid transparent;
   }
 
   aside {
@@ -190,6 +209,7 @@
     z-index: 1000;
     transition: transform 0.3s ease;
     transform: translateX(100%);
+    padding: 1rem;
   }
 
   aside.open {
@@ -213,10 +233,16 @@
     nav::before {
       content: "";
       display: block;
-      position: relative;
+      position: absolute;
       height: 100%;
       width: 60px;
       background-color: var(--purple-light);
+      top: 0;
+      left: 0;
+    }
+
+    #menu-button {
+      top: 0;
     }
   }
 </style>
