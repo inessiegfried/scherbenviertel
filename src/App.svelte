@@ -55,7 +55,7 @@
   <main>
     <Router {routes} />
   </main>
-  <footer>Scherbenviertel - Ines Siegfried</footer>
+  <footer><a href="/kontakt">Scherbenviertel - Ines Siegfried</a></footer>
 </div>
 
 <style>
@@ -172,7 +172,7 @@
     border-bottom-width: 9px;
   }
 
-  #menu > li > a {
+  a {
     color: inherit;
     text-decoration: none;
   }
@@ -248,5 +248,11 @@
     #menu-button {
       top: 0;
     }
+
+    main {
+    max-height: calc(100vh - var(--footer-height));
+    padding-right: 10%;
+    text-align: justify;
+  }
   }
 </style>
