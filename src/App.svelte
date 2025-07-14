@@ -1,44 +1,45 @@
 <script>
-  import Router, { link, push } from 'svelte-spa-router';
-  import { location } from 'svelte-spa-router';
-  
-  import Home from './pages/Home.svelte';
-  import Scherbenviertel from './pages/Scherbenviertel.svelte';
-  import Lesungen from './pages/Lesungen.svelte';
-  import Gedanken from './pages/Gedanken.svelte';
-  import Vita from './pages/Vita.svelte';
-  import Kontakt from './pages/Kontakt.svelte';
-  
+  import Router, { link, push } from "svelte-spa-router";
+  import { location } from "svelte-spa-router";
+
+  import Home from "./pages/Home.svelte";
+  import Scherbenviertel from "./pages/Scherbenviertel.svelte";
+  import Lesungen from "./pages/Lesungen.svelte";
+  import Gedanken from "./pages/Gedanken.svelte";
+  import Vita from "./pages/Vita.svelte";
+  import Kontakt from "./pages/Kontakt.svelte";
+
   const routes = {
-    '/': Home,
-    '/scherbenviertel': Scherbenviertel,
-    '/lesungen': Lesungen,
-    '/gedanken': Gedanken,
-    '/vita': Vita,
-    '/kontakt': Kontakt
-  };
-  
-  const pageNames = {
-    '/': 'Startseite',
-    '/scherbenviertel': 'Scherbenviertel',
-    '/lesungen': 'Lesungen',
-    '/gedanken': 'Gedanken & Geschichten',
-    '/vita': 'Vita',
-    '/kontakt': 'Kontakt'
+    "/": Home,
+    "/scherbenviertel": Scherbenviertel,
+    "/lesungen": Lesungen,
+    "/gedanken": Gedanken,
+    "/vita": Vita,
+    "/kontakt": Kontakt,
   };
 
+  const pageNames = {
+    "/": "Startseite",
+    "/scherbenviertel": "Scherbenviertel",
+    "/lesungen": "Lesungen",
+    "/gedanken": "Gedanken & Geschichten",
+    "/vita": "Vita",
+    "/kontakt": "Kontakt",
+  };
+
+  let isMenuOpen = false;
+
   function toggleMenu() {
-    console.log("Toogle Menu")
-    const sideMenu = document.getElementById("side-menu")
+    isMenuOpen = !isMenuOpen;
   }
-  
-  $: currentPageName = pageNames[$location] || 'Startseite';
+
+  $: currentPageName = pageNames[$location] || "Startseite";
 </script>
 
 <div id="layout">
   <nav>{currentPageName}</nav>
   <button id="menu-button" on:click={toggleMenu}></button>
-  <aside id="side-menu">
+  <aside id="side-menu" class:open={isMenuOpen}>
     <ul id="menu">
       <li><a href="/scherbenviertel" use:link>Scherbenviertel</a></li>
       <li><a href="/lesungen" use:link>Lesungen</a></li>
@@ -54,29 +55,33 @@
 </div>
 
 <style>
-  :root{
+  :root {
     --header-height: 60px;
     --footer-height: 30px;
-    --purple-darker: #231C45;
+    --purple-darker: #231c45;
     --purple-dark: #753268;
-    --purple: #8F0E52;
-    --purple-light: #A91060;
-    --white: #EBEBEB;
+    --purple: #8f0e52;
+    --purple-light: #a91060;
+    --white: #ebebeb;
     --black: #000000;
     --font-size: 16pt;
   }
-  
+
   #layout {
     color: var(--white);
     font-size: var(--font-size);
-    background: radial-gradient(circle at center, var(--purple-dark), var(--purple-darker));
+    background: radial-gradient(
+      circle at center,
+      var(--purple-dark),
+      var(--purple-darker)
+    );
     display: grid;
     grid-template-columns: 1fr 240px;
     grid-template-rows: auto 1fr auto;
-    grid-template-areas: 
-    "navbar navbar"
-    "main aside"
-    "footer footer";
+    grid-template-areas:
+      "navbar navbar"
+      "main aside"
+      "footer footer";
     min-height: 100vh;
   }
 
@@ -98,11 +103,11 @@
     font-weight: bold;
     font-size: 1.2em;
   }
-  
+
   aside {
     grid-area: aside;
   }
-  
+
   footer {
     height: var(--footer-height);
     grid-area: footer;
@@ -138,7 +143,7 @@
   }
 
   #menu > li::before {
-    content: '';
+    content: "";
     position: absolute;
     left: 0;
     top: 50%;
@@ -162,10 +167,40 @@
     text-decoration: none;
   }
 
+  #menu-button {
+    display: block;
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    background-color: var(--purple);
+    top: var(--header-height);
+    right: 10%;
+    border: none;
+    cursor: pointer;
+    z-index: 1001;
+  }
+
+  aside {
+    position: fixed;
+    display: none;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    background-color: var(--purple-darker);
+    z-index: 1000;
+    transition: transform 0.3s ease;
+    transform: translateX(100%);
+  }
+
+  aside.open {
+    display: block;
+    transform: translateX(0);
+  }
+
   @media (min-width: 800px) {
     #layout {
       grid-template-columns: 1fr 2fr;
-      grid-template-areas: 
+      grid-template-areas:
         "navbar main"
         "footer footer";
       grid-template-rows: 1fr auto;
@@ -183,25 +218,5 @@
       width: 60px;
       background-color: var(--purple-light);
     }
-
-    aside {
-      position: fixed;
-      display: none;
-    }
-
-    #menu-button {
-      display: block;
-      position: fixed;
-      width: 60px;
-      height: 100px;
-      background-color: var(--purple-light);
-      top: 0;
-      right: 10%;
-      border: none;
-    }
-
-
   }
-
-
 </style>
