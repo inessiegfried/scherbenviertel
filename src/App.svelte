@@ -45,13 +45,41 @@
   $: currentPageName = pageNames[$location] || "Startseite";
 </script>
 
+<style>
+  :root {
+    --header-height: 60px;
+    --footer-height: 46px;
+    --purple-darker: #231c45;
+    --purple-dark: #753268;
+    --purple: #8f0e52;
+    --purple-light: #a91060;
+    --white: #ebebeb;
+    --black: #000000;
+    --font-size: 16pt;
+  }
+
+  #layout {
+    color: var(--white);
+    font-size: var(--font-size);
+    background: radial-gradient(
+      circle at center,
+      var(--purple-dark),
+      var(--purple-darker)
+    );
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+      "navbar"
+      "main"
+      "footer";
+    min-height: 100vh;
+  }
+</style>
+
 <div id="layout">
   <Header {currentPageName} {toggleMenu} />
   <SideMenu {isMenuOpen} {closeMenu} />
   <MainContent {routes} />
   <Footer />
 </div>
-
-<style>
-  /* Add styles specific to App here */
-</style>

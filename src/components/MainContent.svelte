@@ -7,5 +7,9 @@
   <Router {routes} />
 </main>
 <style>
-  /* Add styles specific to MainContent here */
+  main {
+    overflow-y: scroll;
+    max-height: calc(100vh - var(--header-height) - var(--footer-height));
+    padding: 2rem;
+  }
 </style>
