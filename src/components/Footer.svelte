@@ -1,4 +1,11 @@
-<footer><a href="/kontakt">Scherbenviertel - Ines Siegfried</a></footer>
+<script>
+import {link} from "svelte-spa-router"
+</script>
+
+<footer>
+    <a use:link href="/kontakt">Scherbenviertel - Ines Siegfried</a>
+</footer>
+
 <style>
   footer {
     height: var(--footer-height);

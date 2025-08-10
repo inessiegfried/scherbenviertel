@@ -1,4 +1,41 @@
-<h1>Scherbenviertel</h1>
-<section>
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium impedit provident possimus recusandae. Alias eligendi sapiente cum temporibus, sed tempora id architecto accusantium eos fugit impedit, quo quam similique harum. Non ratione eos, animi doloribus quisquam officia ex autem sit dolores ipsam? Modi iusto distinctio eaque exercitationem ipsam eum tempora voluptate dolorum mollitia molestiae nemo explicabo neque nam accusamus adipisci libero at quas porro ratione nostrum, sed, error magni laborum a. Dignissimos maiores, autem expedita cumque iusto culpa consectetur eligendi amet aspernatur! Unde fugit tempora pariatur eos porro odit dolorum expedita? Aut, ut, deleniti eum, nemo sed nobis libero facilis sapiente ipsum quibusdam eius? Qui dignissimos libero consequuntur laudantium, nisi quidem fuga sapiente repudiandae deleniti maiores, voluptatum, voluptatem porro dicta. Neque incidunt illum corrupti officia, quis iure sed omnis dolorem iusto sit reprehenderit vitae voluptatum ipsam maxime porro? Recusandae et dicta officia tempore cum. Ea repudiandae eum, tempora nobis, officiis nostrum laudantium distinctio, praesentium necessitatibus sint voluptates culpa fugit dolorum. Ipsam commodi soluta, optio rerum veniam corporis aperiam dignissimos quisquam et voluptatum qui eveniet distinctio veritatis dolorum minima nisi perspiciatis? Libero obcaecati velit eius. Possimus sequi, aspernatur quis laborum magni libero quos, voluptates aut eum optio ut a illum harum reiciendis! Deleniti porro provident corrupti magni laborum eos ducimus ea quidem tenetur quas enim unde, sequi cumque itaque, veniam, eaque commodi ipsam! Corporis vitae quaerat eligendi doloremque voluptatum saepe ad dolore iusto illum, repellendus debitis temporibus suscipit nobis quas blanditiis eaque odio laborum voluptate enim atque sit magni voluptatibus dicta! Id eveniet fugiat molestiae. Voluptate, consequatur quis explicabo voluptates consectetur harum quia veniam fuga tenetur enim nam nulla sed? Hic obcaecati numquam voluptas, pariatur non necessitatibus! Minus quibusdam consectetur, molestias id ratione perspiciatis esse voluptatibus voluptas! Odit, numquam ratione. Vitae eaque numquam et quia sunt, reiciendis optio! Sequi earum nam, eaque omnis a perferendis. Debitis consectetur eligendi, tempora minus perspiciatis quo voluptatem doloribus quas voluptas temporibus fugit amet laudantium nihil ratione unde illum, laborum quibusdam deserunt vitae repudiandae illo at vero vel. Aliquam commodi, dicta dolor distinctio autem minus perferendis praesentium fugit quam ullam ex corporis incidunt pariatur sit a veritatis fuga consectetur ipsa debitis dolores porro molestias optio et! Dicta harum assumenda unde, alias pariatur eligendi a mollitia cum voluptatem, excepturi modi reiciendis possimus soluta voluptatum eveniet. Adipisci libero facilis maiores voluptate, enim labore eaque ad eligendi eius at atque aut? Corrupti explicabo error esse ex voluptatem, totam dolorem odio velit consequatur nobis unde eaque exercitationem nulla minima voluptas? Quos corporis impedit, nobis ad quisquam nam non ex quae accusantium facere maiores vel assumenda repellat! Facilis, sequi ut neque quaerat nostrum corrupti. Cumque laborum quae corrupti delectus totam voluptatibus, est aliquam rem quas soluta officia aliquid iure culpa. Obcaecati soluta vero laboriosam tempore repudiandae similique et, itaque aperiam veniam nostrum, dolor repellendus? Nobis sapiente facere enim distinctio earum atque neque iusto amet possimus omnis a voluptas deserunt labore, eligendi soluta totam deleniti necessitatibus temporibus quasi in? Maiores veritatis error magni non dignissimos repellat in perferendis! Rerum dolorum eveniet eum.
-</section>
+<script>
+  import imgUrl from "/img/ines.jpg"
+</script>
+
+<div id="grid">
+    <div class="img-with-header">
+        <h2>Ines Siegfried</h2>
+        <img src={imgUrl} />
+    </div>
+    <section>
+        <p class="italics">
+            Er war ein Spurius, das uneheliche Kind einer Glätterin, der Enkel
+            geschiedener Grosseltern, kam aus einem Scherbenviertel und wollte
+            nicht dankbar dafür sein, dass für seine Zukunft gesorgt worden
+            war. Konnte nicht zufrieden sein, dass der Waisenvater das für ihn
+            Menschenmögliche getan hatte. Jakob schüttelte über sich selbst den
+            Kopf.
+        </p>
+        <p>
+            Im Herbst 2025 erscheint die historische Erzählung SCHERBENVIERTEL
+            im eFeF-Verlag.
+        </p>
+
+    </section>
+</div>
+
+<style>
+#grid {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 2rem;
+    max-width: 840px;
+}
+p.italics {
+    font-style: italic;
+}
+
+.img-with-header > img {
+    width: 100%;
+}
+</style>

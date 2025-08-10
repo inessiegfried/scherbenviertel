@@ -1,5 +1,5 @@
 <script>
-  import Router, { link, push } from "svelte-spa-router";
+  import Router, { push } from "svelte-spa-router";
   import { location } from "svelte-spa-router";
 
   import Home from "./pages/Home.svelte";
@@ -24,7 +24,7 @@
   };
 
   const pageNames = {
-    "/": "Startseite",
+    "/": "Aktuell",
     "/scherbenviertel": "Scherbenviertel",
     "/lesungen": "Lesungen",
     "/gedanken": "Gedanken & Geschichten",
