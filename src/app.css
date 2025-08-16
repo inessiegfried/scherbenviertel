@@ -10,13 +10,35 @@
   --purple-darker: hsl(from var(--purple) calc(h - 20) s calc(l - 20));
   --purple-dark: hsl(from var(--purple) calc(h - 30) s calc(l - 10));
   --purple-light: hsl(from var(--purple) h s calc(l + 20)); 
-  --white: #ebebeb;
+  --white: #dbdbdb;
   --black: #000;
-  --font-size: 15pt;
+  
+  /* This is the default font size, everything should be relative to this.
+     We use rem units here, to respect the defaults of the user. If a user
+     changes his fontsize in the browser, we automatically adjust to this
+     with the root-em unit.
+     TODO: Could make sense to overwrite this one, since the styling is
+     very specific for this website. */
+  --font-size: 1.125rem;
+
+  /* Add more font options here, find a good one that looks very nice. */
+  --font-family: Georgia, Times, serif;
+
+  /* Setting the font weight for the default font.
+     The default is 400, but we can go up until 900 if we want. */
+  --font-weight: 400;
+
+  /* The default font color for the whole page is set with this one. */
+  --font-color: var(--white);
+
+  /* This here controls the default height of a line. It is a value without
+     a unit, and stretches the font-size by this value to get the line-height.
+     Default: 1.4 */
+  --line-height: 1.6;
 }
 
 ::-webkit-scrollbar {
-  width: 6px;
+  width: clamp(5px, 0.5em, 10px);
 }
 
 ::-webkit-scrollbar-track {
@@ -36,6 +58,15 @@ body {
       var(--purple),
       var(--purple-dark)
     );
+    font-family: var(--font-family);
+    font-size: var(--font-size);
+    font-weight: var(--font-weight);
+    color: var(--font-color);
+    line-height: var(--line-height);
+}
+
+.italic {
+  font-style: italic;
 }
 
 ul {

@@ -17,7 +17,7 @@ export default defineConfig({
   resolve: {
     alias: {
       "@": generateAlias("/"),
-      "@img": generateAlias("/homepage/public/img/")
+      "@img": generateAlias("/public/img/")
     }
   }
 })
