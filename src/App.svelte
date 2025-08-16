@@ -1,5 +1,4 @@
 <script>
-  import Router, { push } from "svelte-spa-router";
   import { location } from "svelte-spa-router";
 
   import Home from "./pages/Home.svelte";
@@ -45,8 +44,14 @@
   $: currentPageName = pageNames[$location] || "Startseite";
 </script>
 
-<style>
+<div id="layout">
+  <Header {currentPageName} {toggleMenu} />
+  <SideMenu {isMenuOpen} {closeMenu} />
+  <MainContent {routes} />
+  <Footer />
+</div>
 
+<style>
   #layout {
     color: var(--white);
     font-size: var(--font-size);
@@ -61,9 +66,3 @@
   }
 </style>
 
-<div id="layout">
-  <Header {currentPageName} {toggleMenu} />
-  <SideMenu {isMenuOpen} {closeMenu} />
-  <MainContent {routes} />
-  <Footer />
-</div>
