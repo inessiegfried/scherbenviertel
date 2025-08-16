@@ -4,7 +4,9 @@
 </script>
 
 <nav>{currentPageName}</nav>
+<!-- svelte-ignore a11y_consider_explicit_label -->
 <button id="menu-button" on:click={toggleMenu}></button>
+
 <style>
   nav {
     height: var(--header-height);
@@ -21,13 +23,14 @@
     display: block;
     position: fixed;
     width: 60px;
-    height: 60px;
+    height: 80px;
     background-color: var(--purple);
-    top: var(--header-height);
+    top: calc(var(--header-height) - 20px);
     right: 5%;
     border: none;
     cursor: pointer;
     z-index: 1001;
+    animation: wiggle 5s linear 10s infinite;
   }
 
   #menu-button::before {
@@ -51,5 +54,23 @@
 
   a:hover {
     color: var(--purple-light);
+  }
+
+  @keyframes wiggle {
+    0% {
+      rotate: 0deg;
+    }
+    2% {
+      rotate: 5deg;
+    }
+    6% {
+      rotate: -5deg;
+    }
+    8% {
+      rotate: 0deg;
+    }
+    100% {
+      rotate: 0deg;
+    }
   }
 </style>
