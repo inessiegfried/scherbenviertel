@@ -15,10 +15,11 @@
     <li><a href="/kontakt" use:link on:click={closeMenu}>Kontakt</a></li>
   </ul>
 </aside>
+
 <style>
   aside {
     position: fixed;
-    display: none;
+    display: block;
     top: 0;
     right: 0;
     height: 100vh;

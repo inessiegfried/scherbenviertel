@@ -19,7 +19,7 @@
      with the root-em unit.
      TODO: Could make sense to overwrite this one, since the styling is
      very specific for this website. */
-  --font-size: 1.125rem;
+  --font-size: 1.25rem;
 
   /* Add more font options here, find a good one that looks very nice. */
   --font-family: Georgia, Times, serif;
@@ -63,6 +63,7 @@ body {
     font-weight: var(--font-weight);
     color: var(--font-color);
     line-height: var(--line-height);
+    text-align: justify;
 }
 
 .italic {

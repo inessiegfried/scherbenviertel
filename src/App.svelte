@@ -31,7 +31,7 @@
     "/kontakt": "Kontakt",
   };
 
-  let isMenuOpen = false;
+  let isMenuOpen = window.innerWidth < (800 + 240) ? false : true;
 
   function toggleMenu() {
     isMenuOpen = !isMenuOpen;
@@ -53,8 +53,6 @@
 
 <style>
   #layout {
-    color: var(--white);
-    font-size: var(--font-size);
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto 1fr auto;
@@ -62,7 +60,7 @@
       "navbar"
       "main"
       "footer";
-    min-height: 100vh;
+    min-height: 100vh; /* We need this to fill up all the space.*/
   }
 </style>
 

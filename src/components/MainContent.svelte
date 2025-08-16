@@ -12,6 +12,6 @@
     overflow-y: scroll;
     max-height: calc(100vh - var(--header-height) - var(--footer-height));
     padding: 2rem;
-    margin: auto;
+    margin-block: auto;
   }
 </style>
