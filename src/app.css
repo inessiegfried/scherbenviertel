@@ -1,7 +1,41 @@
+* {
+  box-sizing: border-box;
+}
+
+
+:root {
+  --header-height: 59px;
+  --footer-height: 45px;
+  --purple: hsl(320, 80%, 28%);
+  --purple-darker: hsl(from var(--purple) calc(h - 20) s calc(l - 20));
+  --purple-dark: hsl(from var(--purple) calc(h - 30) s calc(l - 10));
+  --purple-light: hsl(from var(--purple) h s calc(l + 20)); 
+  --white: #ebebeb;
+  --black: #000;
+  --font-size: 15pt;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--purple-dark);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--purple);
+}
+
 body {
     margin: 0;
     padding: 0;
     overflow: hidden;
+    background: radial-gradient(
+      circle at center,
+      var(--purple),
+      var(--purple-dark)
+    );
 }
 
 ul {
