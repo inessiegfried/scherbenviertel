@@ -37,9 +37,6 @@
     gap: 2rem;
     max-width: 840px;
 }
-p.italics {
-    font-style: italic;
-}
 
 .img-with-header > img {
     width: 100%;

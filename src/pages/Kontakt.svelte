@@ -47,7 +47,7 @@ li::before {
   transform: translateY(-50%);
   width: 0;
   height: 0;
-  border-left: 8px solid var(--purple-light);
+  border-left: 8px solid var(--base-color-light);
   border-top: 6px solid transparent;
   border-bottom: 6px solid transparent;
 }

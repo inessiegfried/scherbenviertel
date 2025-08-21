@@ -1,13 +1,14 @@
 <script>
-  import imgUrl from "/img/ines.jpg"
+  import imgUrl from "@img/cover.png?url"
 </script>
 
-<div id="grid">
-    <section>
-        <p>
+<div id="grid" class="main-container">
+    <div class="img-with-header">
+        <img src={imgUrl} alt="Buch Cover"/>
+        <p class="text-center">
         ISBN 978-3-906199-33-7
         </p>
-    </section>
+    </div>
     <section>
         <p>
             Erzählt wird die Geschichte einer Unterschichtsfamilie aus dem 19.
@@ -32,11 +33,15 @@
     gap: 2rem;
     max-width: 840px;
 }
-p.italics {
-    font-style: italic;
-}
 
 .img-with-header > img {
     width: 100%;
+}
+
+@media (max-width: 600px) {
+  #grid {
+    display: flex;
+    flex-direction: column;
+  }
 }
 </style>

@@ -3,14 +3,16 @@
   export let toggleMenu;
 </script>
 
-<nav>{currentPageName}</nav>
+<nav>
+  <h1>{currentPageName}</h1>
+</nav>
 <!-- svelte-ignore a11y_consider_explicit_label -->
 <button id="menu-button" on:click={toggleMenu}></button>
 
 <style>
   nav {
     height: var(--header-height);
-    background-color: var(--purple);
+    background-color: var(--base-color);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -24,7 +26,7 @@
     position: fixed;
     width: var(--bookmark-width);
     height: var(--bookmark-height);
-    background-color: var(--purple);
+    background-color: var(--base-color);
     top: 0;
     right: var(--bookmark-right);
     border: none;
@@ -41,19 +43,9 @@
     transform: translateX(-50%);
     width: 0;
     height: 0;
-    border-left: 30px solid var(--purple);
-    border-right: 30px solid var(--purple);
+    border-left: 30px solid var(--base-color);
+    border-right: 30px solid var(--base-color);
     border-bottom: 20px solid transparent;
-  }
-
-  a {
-    color: var(--white);
-    text-decoration: none;
-    transition: color 0.3s;
-  }
-
-  a:hover {
-    color: var(--purple-light);
   }
 
   @keyframes wiggle {

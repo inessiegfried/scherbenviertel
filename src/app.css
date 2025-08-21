@@ -13,12 +13,19 @@
   --bookmark-width: 60px;
   --bookmark-right: 5%;
   --bookmark-left: calc(var(--bookmark-right) + var(--bookmark-width));
+
+  /* Hier werden die Grundfarben definiert. */
   --purple: hsl(320, 80%, 28%);
-  --purple-darker: hsl(from var(--purple) calc(h - 20) s calc(l - 20));
-  --purple-dark: hsl(from var(--purple) calc(h - 30) s calc(l - 10));
-  --purple-light: hsl(from var(--purple) h s calc(l + 20)); 
+  --blue: hsl(203, 100%, 27%);
+  --turkies: hsl(139, 38%, 78%);
+  --yellow: hsl(52, 100%, 50%);
   --white: #dbdbdb;
   --black: #000;
+
+  --base-color: var(--blue);
+  --base-color-darker: hsl(from var(--base-color) calc(h - 20) s calc(l - 20));
+  --base-color-dark: hsl(from var(--base-color) calc(h - 30) s calc(l - 10));
+  --base-color-light: hsl(from var(--base-color) h s calc(l + 20)); 
   
   /* This is the default font size, everything should be relative to this.
      We use rem units here, to respect the defaults of the user. If a user
@@ -37,6 +44,7 @@
 
   /* The default font color for the whole page is set with this one. */
   --font-color: var(--white);
+  --title-color: var(--yellow);
 
   /* This here controls the default height of a line. It is a value without
      a unit, and stretches the font-size by this value to get the line-height.
@@ -49,11 +57,11 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--purple-dark);
+  background: var(--base-color-dark);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--purple);
+  background: var(--base-color);
 }
 
 body {
@@ -62,8 +70,8 @@ body {
     overflow: hidden;
     background: radial-gradient(
       circle at center,
-      var(--purple),
-      var(--purple-dark)
+      var(--base-color),
+      var(--base-color-dark)
     );
     font-family: var(--font-family);
     font-size: var(--font-size);
@@ -74,8 +82,16 @@ body {
     hyphens: auto;
 }
 
+h1, h2, h3 {
+  color: var(--title-color);
+}
+
 .italic {
   font-style: italic;
+}
+
+.text-center {
+  text-align: center;
 }
 
 ul {
@@ -95,7 +111,15 @@ li::before {
   transform: translateY(50%);
   width: 0;
   height: 0;
-  border-left: 8px solid var(--purple-light);
+  border-left: 8px solid var(--base-color-light);
   border-top: 6px solid transparent;
   border-bottom: 6px solid transparent;
+}
+
+.main-container {
+  overflow-y: scroll;
+  height: 100%;
+  padding: 2rem;
+  position: relative;
+  top: 60px;
 }

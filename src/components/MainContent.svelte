@@ -10,7 +10,6 @@
 <style>
   main {
     height: var(--body-height);
-    padding: 2rem;
     margin-block: 0;
   }
 </style>

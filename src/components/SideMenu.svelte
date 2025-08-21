@@ -23,7 +23,7 @@
     top: 0;
     right: 0;
     height: 100vh;
-    background-color: var(--purple-darker);
+    background-color: var(--base-color-darker);
     z-index: 1000;
     transition: transform 0.3s ease;
     transform: translateX(100%);
@@ -58,7 +58,7 @@
   }
 
   #menu > li > a:hover {
-    color: var(--purple-light);
+    color: var(--base-color-light);
   }
 
   #menu > li::before {
@@ -69,7 +69,7 @@
     transform: translateY(-50%);
     width: 0;
     height: 0;
-    border-left: 8px solid var(--purple-light);
+    border-left: 8px solid var(--base-color-light);
     border-top: 6px solid transparent;
     border-bottom: 6px solid transparent;
     transition: all 0.3s ease;

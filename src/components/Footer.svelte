@@ -9,7 +9,7 @@ import {link} from "svelte-spa-router"
 <style>
   footer {
     height: var(--footer-height);
-    background-color: var(--purple);
+    background-color: var(--base-color);
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -18,12 +18,12 @@ import {link} from "svelte-spa-router"
   }
 
   a {
-    color: var(--white);
+    color: var(--title-color);
     text-decoration: none;
     transition: color 0.3s;
   }
 
   a:hover {
-    color: var(--purple-light);
+    color: var(--base-color-light);
   }
 </style>
