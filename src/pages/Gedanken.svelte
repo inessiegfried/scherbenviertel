@@ -1,6 +1,12 @@
+<script>
+    import Detail from "../components/Details.svelte"
+</script>
+
+
 <div class="grid">
-    <h2>Im Viereck</h2>
-    <section>
+    <Detail>
+    <summary slot="summary">Im Viereck</summary>
+    <section slot="content">
         <p>
             „He, Petra, Lust auf ein Eis?“. Juri lachte verschmitzt zu ihr
             rüber. „Hab grad keine Zeit. Muss ins Training. Tschüüüüsss.“ Petra
@@ -52,9 +58,11 @@
             sich Juri auf den Heimweg. 
         </p>
     </section>
+    </Detail>
 
-    <h2>Präpositionen</h2>
-    <section>
+    <Detail>
+    <summary slot="summary">Präpositionen</summary>
+    <section slot="content">
         <p>
             Will denn der nicht endlich aufhören zu schwatzen? Und ich bin so
             müde. War wohl doch zu viel Rotwein gestern, ich vertrage einfach
@@ -94,9 +102,11 @@
             sonst geht das Geraune gleich wieder los.
         </p>
     </section>
+    </Detail>
 
-    <h2>Wiederbeleben</h2>
-    <section>
+    <Detail>
+    <summary slot="summary">Wiederbeleben</summary>
+    <section slot="content">
         <p>
             Das Zimmer war kahl. Ein Tisch, ein Stuhl, ein Schrank, ein Bett.
             Sonst nichts. Auf dem Rost des Gitterbettes lag eine Matratze in
@@ -191,34 +201,14 @@
             alles Erzählen und Nachempfinden machte sie zur Fiktion. 
         </p>
     </section>
+    </Detail>
 
 </div>
 
 <style>
 .grid {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    margin-right: calc(5% + 60px);
-    height: 100%;
-}
-
-section > p {
-    text-align: justify;
-}
-
-.grid > h2 {
-    position: sticky;
-    top: 0px;
-    margin-block: 0;
-}
-
-.grid > section {
-    height: 100%;
-}
-
-@media (max-width: 600px) {
-    .grid{ 
-        grid-template-columns: 1fr;
-    }
+    display: flex;
+    flex-direction: column;
+    height: var(--body-height);
 }
 </style>

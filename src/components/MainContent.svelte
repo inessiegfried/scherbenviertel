@@ -9,9 +9,8 @@
 
 <style>
   main {
-    overflow-y: scroll;
-    max-height: calc(100vh - var(--header-height) - var(--footer-height));
+    max-height: var(--body-height);
     padding: 2rem;
-    margin-block: auto;
+    margin-block: 0;
   }
 </style>

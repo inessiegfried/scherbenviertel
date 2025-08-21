@@ -4,6 +4,8 @@
 
 
 :root {
+  interpolate-size: allow-keywords;
+
   --header-height: 59px;
   --footer-height: 45px;
   --body-height: calc(100dvh - var(--header-height) - var(--footer-height));
