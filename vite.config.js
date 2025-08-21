@@ -9,7 +9,10 @@ function generateAlias(absolutePath) {
 
 // https://vite.dev/config/
 export default defineConfig({
-  plugins: [svelte()],
+  plugins: [
+    svelte(),
+  ],
+  assetsInclude: ['/public/pdfs/*.pdf'],
   base: '/homepage/',
   build: {
     outDir: 'dist'
