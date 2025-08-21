@@ -53,14 +53,9 @@
 
 <style>
   #layout {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto 1fr auto;
-    grid-template-areas:
-      "navbar"
-      "main"
-      "footer";
-    min-height: 100vh; /* We need this to fill up all the space.*/
+    display: flex;
+    flex-direction: column;
+    min-height: 100dvh; /* We need this to fill up all the space.*/
   }
 </style>
 

@@ -199,10 +199,21 @@
     display: grid;
     grid-template-columns: 1fr 2fr;
     margin-right: calc(5% + 60px);
+    height: 100%;
 }
 
 section > p {
     text-align: justify;
+}
+
+.grid > h2 {
+    position: sticky;
+    top: 0px;
+    margin-block: 0;
+}
+
+.grid > section {
+    height: 100%;
 }
 
 @media (max-width: 600px) {

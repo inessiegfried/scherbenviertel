@@ -22,11 +22,11 @@
   #menu-button {
     display: block;
     position: fixed;
-    width: 60px;
-    height: 80px;
+    width: var(--bookmark-width);
+    height: var(--bookmark-height);
     background-color: var(--purple);
-    top: calc(var(--header-height) - 20px);
-    right: 5%;
+    top: 0;
+    right: var(--bookmark-right);
     border: none;
     cursor: pointer;
     z-index: 1001;

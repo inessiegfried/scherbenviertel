@@ -6,6 +6,11 @@
 :root {
   --header-height: 59px;
   --footer-height: 45px;
+  --body-height: calc(100dvh - var(--header-height) - var(--footer-height));
+  --bookmark-height: calc(var(--header-height) + 40px);
+  --bookmark-width: 60px;
+  --bookmark-right: 5%;
+  --bookmark-left: calc(var(--bookmark-right) + var(--bookmark-width));
   --purple: hsl(320, 80%, 28%);
   --purple-darker: hsl(from var(--purple) calc(h - 20) s calc(l - 20));
   --purple-dark: hsl(from var(--purple) calc(h - 30) s calc(l - 10));
@@ -19,7 +24,7 @@
      with the root-em unit.
      TODO: Could make sense to overwrite this one, since the styling is
      very specific for this website. */
-  --font-size: 1.25rem;
+  --font-size: 1.5rem;
 
   /* Add more font options here, find a good one that looks very nice. */
   --font-family: Georgia, Times, serif;
@@ -64,6 +69,7 @@ body {
     color: var(--font-color);
     line-height: var(--line-height);
     text-align: justify;
+    hyphens: auto;
 }
 
 .italic {
