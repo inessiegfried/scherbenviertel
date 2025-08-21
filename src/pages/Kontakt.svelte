@@ -5,6 +5,16 @@
                 ines.siegfried@bluewin.ch
             </a>
         </li>
+        <li>
+            <a href="https://www.efefverlag.ch/">
+                efefverlag.ch
+            </a>
+        </li>
+        <li>
+            <a href="mailto:info@efefvarlag.ch">
+                info@efefverlag.ch
+            </a>
+        </li>
     </ul>
 </section>
 

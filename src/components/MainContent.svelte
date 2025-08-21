@@ -9,7 +9,7 @@
 
 <style>
   main {
-    max-height: var(--body-height);
+    height: var(--body-height);
     padding: 2rem;
     margin-block: 0;
   }
