@@ -209,6 +209,5 @@
 .grid {
     display: flex;
     flex-direction: column;
-    height: var(--body-height);
 }
 </style>

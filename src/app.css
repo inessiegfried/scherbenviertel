@@ -17,7 +17,7 @@
   /* Hier werden die Grundfarben definiert. */
   --purple: hsl(320, 80%, 28%);
   --blue: hsl(203, 100%, 27%);
-  --turkies: hsl(139, 38%, 78%);
+  --teal: hsl(139, 38%, 78%);
   --yellow: hsl(52, 100%, 50%);
   --white: #dbdbdb;
   --black: #000;
@@ -118,8 +118,11 @@ li::before {
 
 .main-container {
   overflow-y: scroll;
-  height: 100%;
-  padding: 2rem;
-  position: relative;
-  top: 60px;
+  height: var(--body-height);
+  padding-top: var(--header-height);
+  padding-inline: 0.5em;
+  margin-top: 0;
+  /* display: flex; */
+  /* flex-direction: column; */
+  /* justify-content: center; */
 }

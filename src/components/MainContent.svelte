@@ -3,13 +3,9 @@
   export let routes;
 </script>
 
-<main>
+<main class="main-container">
   <Router {routes} />
 </main>
 
 <style>
-  main {
-    height: var(--body-height);
-    margin-block: 0;
-  }
 </style>

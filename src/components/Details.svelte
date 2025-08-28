@@ -44,13 +44,6 @@
 details :global([slot="summary"]) {
   font-size: 1.5em;
   font-weight: bold;
-  position: sticky;
-  top: 0;
-}
-
-details :global([slot="content"]) {
-  height: var(--body-height);
-  overflow-y: scroll;
 }
 
 </style>

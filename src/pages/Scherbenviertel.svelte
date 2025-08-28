@@ -2,7 +2,7 @@
   import imgUrl from "@img/cover.png?url"
 </script>
 
-<div id="grid" class="main-container">
+<div id="grid">
     <div class="img-with-header">
         <img src={imgUrl} alt="Buch Cover"/>
         <p class="text-center">
