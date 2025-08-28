@@ -20,6 +20,7 @@ export default defineConfig({
   resolve: {
     alias: {
       "@": generateAlias("/"),
+      "@components": generateAlias("/src/components/"),
       "@img": generateAlias("/public/img/"),
       "@pdfs": generateAlias("/public/pdfs/")
     }

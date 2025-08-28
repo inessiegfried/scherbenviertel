@@ -1,15 +1,16 @@
 <script>
   import imgUrl from "@img/cover.png?url"
+  import TwoCols from "@components/TwoCols.svelte"
 </script>
 
-<div id="grid">
-    <div class="img-with-header">
+<TwoCols>
+    <div slot="first">
         <img src={imgUrl} alt="Buch Cover"/>
         <p class="text-center">
         ISBN 978-3-906199-33-7
         </p>
     </div>
-    <section>
+    <section slot="second">
         <p>
             Erzählt wird die Geschichte einer Unterschichtsfamilie aus dem 19.
             Jahrhundert. Der Bäcker, Samuel Schwarz, ein jähzorniger
@@ -23,25 +24,4 @@
             des Scherbenviertels.
         </p>
     </section>
-</div>
-
-<style>
-#grid {
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
-    max-width: 840px;
-}
-
-.img-with-header > img {
-    width: 100%;
-}
-
-@media (max-width: 600px) {
-  #grid {
-    display: flex;
-    flex-direction: column;
-  }
-}
-</style>
+</TwoCols>

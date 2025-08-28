@@ -1,12 +1,13 @@
 <script>
   import imgUrl from "/img/ines2.jpg"
+  import TwoCols from "@components/TwoCols.svelte"
 </script>
 
-<div id="grid">
-    <div class="img-with-header">
+<TwoCols>
+    <div slot="first">
         <img src={imgUrl} />
     </div>
-    <section>
+    <section slot="second">
         <ul>
             <li>
                 Ines Siegfried, geboren 1963 in Basel, studierte Deutsch,
@@ -28,47 +29,9 @@
             </li>
         </ul>
     </section>
-</div>
+</TwoCols>
 
 <style>
-#grid {
-    justify-self: center;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 10%;
-    max-width: calc(800px + 240px);
-}
-
-.img-with-header {
-    max-width: 400px;
-    min-width: 200px;
-    text-align: center;
-    
-    > img {
-        width: 100%;
-    }
-
-    > h2 {
-        padding: 0;
-        margin: 0;
-    }
-}
-
-@media (max-width: 600px) {
-    #grid {
-        flex-direction: column-reverse;
-        margin-top: 30px;
-    }
-
-    .img-with-header {
-        text-align: center;
-
-        > img {
-            width: 80%;
-        }
-    }
-
-}
+li { margin-bottom: 1em;}
 </style>
+

@@ -46,11 +46,6 @@
     padding: 0;
   }
 
-  #menu > li {
-    position: relative;
-    padding-left: 1.5rem;
-  }
-
   #menu > li > a {
     color: var(--white);
     text-decoration: none;
@@ -61,23 +56,12 @@
     color: var(--base-color-light);
   }
 
-  #menu > li::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 0;
-    height: 0;
-    border-left: 8px solid var(--base-color-light);
-    border-top: 6px solid transparent;
-    border-bottom: 6px solid transparent;
-    transition: all 0.3s ease;
-  }
 
-  #menu > li:hover::before {
+  #menu > li:hover::before,
+  #menu > li:focus::before {
     border-left-width: 12px;
     border-top-width: 9px;
     border-bottom-width: 9px;
+    transform: translateY(50%);
   }
 </style>
