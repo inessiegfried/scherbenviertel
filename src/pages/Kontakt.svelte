@@ -3,7 +3,7 @@
   import TwoCols from "@components/TwoCols.svelte"
 </script>
 
-<TwoCols id="grid">
+<TwoCols>
   <div slot="first">
     <h2 class="hide-sm">Ines Siegfried</h2>
     <img src={imgUrl} alt="Bild der Authorin"/>

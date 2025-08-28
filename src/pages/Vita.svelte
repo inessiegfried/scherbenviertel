@@ -5,7 +5,7 @@
 
 <TwoCols>
     <div slot="first">
-        <img src={imgUrl} />
+        <img src={imgUrl} alt="Bild der Authorin" />
     </div>
     <section slot="second">
         <ul>

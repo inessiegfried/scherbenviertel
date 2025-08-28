@@ -1,22 +1,23 @@
 <script>
   import FlyerURL from "@pdfs/Flyer-TheoSounds.pdf?url"
+  import Card from "@components/Card.svelte"
 </script>
 
 
-<ul>
-  <li class="card">
-    <div class="card-header"><span>Sonntag, 26. Oktober</span><span>17.00 Uhr</span></div>
-    <div class="card-body">
+<div class="card-container">
+  <Card>
+    <div slot="header"><span>Sonntag, 26. Oktober</span><span>17.00 Uhr</span></div>
+    <div slot="body">
       <div>Herbst-Neuerscheinungen</div>
       <div>organisiert von lokal lesen in der Allgemeinen
         Lesegesellschaft Basel</div>
     </div>
-  </li>
-  <li class="card">
-    <div class="card-header">
+  </Card>
+  <Card>
+    <div slot="header">
       <span>Mittwoch, 29. Oktober 2025</span><span>19.30 Uhr</span>
     </div>
-    <div class="card-body">
+    <div slot="body">
       <div>
      mit musikalischer Begleitung des Günther-Schürmann Duos im Rahmen der TheoSounds in der Theodorskirche
       </div>
@@ -24,48 +25,19 @@
         <a href={FlyerURL}>Flyer</a>
       </div>
     </div>
-  </li>
-  <li class="card">
-    <div class="card-header"><span>Mittwoch, 19. November 2025</span><span>19.00 Uhr</span></div>
-    <div class="card-body">
+  </Card>
+  <Card>
+    <div slot="header"><span>Mittwoch, 19. November 2025</span><span>19.00 Uhr</span></div>
+    <div slot="body">
       im Karthäusersaal des Waisenhauses
     </div>
-  </li>
-</ul>
+  </Card>
+</div>
 
 <style>
-    .card {
-        padding: 0;
-        box-shadow: 6px 3px 12px var(--teal);
-        transition: box-shadow 400ms ease;
-    }
-
-    .card:hover {
-        box-shadow: 6px 3px 18px var(--teal);
-    }
-
-    .card-header {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        color: var(--yellow);
-        margin: 0;
-        background-color: hsl(from var(--teal) h s l / 0.2);
-        padding: 0.25em 1em;
-    }
-
-    .card-body {
-        padding: 1em;
-    }
-
-    ul {
-        display: flex;
-        flex-direction: column;
-        gap: 2rem;
-    }
-
-    li::before {
-        content: "";
-        display: none;
-    }
+.card-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
 </style>

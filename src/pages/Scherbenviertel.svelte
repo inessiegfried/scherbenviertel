@@ -6,7 +6,7 @@
 <TwoCols>
     <div slot="first">
         <img src={imgUrl} alt="Buch Cover"/>
-        <p class="text-center">
+        <p class="text-center text-yellow text-mono">
         ISBN 978-3-906199-33-7
         </p>
     </div>

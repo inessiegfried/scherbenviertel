@@ -94,6 +94,14 @@ h1, h2, h3 {
   text-align: center;
 }
 
+.text-yellow {
+  color: var(--yellow);
+}
+
+.text-mono {
+  font-family: monospace;
+}
+
 ul {
   list-style: none;
 }
