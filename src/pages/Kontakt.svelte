@@ -1,3 +1,12 @@
+<script>
+  import imgUrl from "@img/ines3.jpg?url"
+</script>
+
+<div id="grid">
+    <div class="img-with-header">
+        <h2>Ines Siegfried</h2>
+        <img src={imgUrl} alt="Bild der Authorin"/>
+    </div>
 <section>
     <ul>
         <li>
@@ -17,38 +26,47 @@
         </li>
     </ul>
 </section>
+</div>
 
 <style>
-section {
+#grid {
+    justify-self: center;
     display: flex;
-    align-items: center;
+    flex-direction: row;
     justify-content: center;
+    align-items: center;
+    gap: 10%;
+    max-width: calc(800px + 240px);
 }
 
-a {
-    color: white;
-    text-decoration: none;
+.img-with-header {
+    max-width: 400px;
+    min-width: 200px;
+    text-align: center;
+    
+    > img {
+        width: 100%;
+    }
+
+    > h2 {
+        padding: 0;
+        margin: 0;
+    }
 }
 
-ul {
-  list-style: none;
-}
+@media (max-width: 600px) {
+    #grid {
+        flex-direction: column-reverse;
+        margin-top: 30px;
+    }
 
-li {
-  position: relative;
-  padding-left: 1.5rem;
-}
+    .img-with-header {
+        text-align: center;
 
-li::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 0;
-  height: 0;
-  border-left: 8px solid var(--base-color-light);
-  border-top: 6px solid transparent;
-  border-bottom: 6px solid transparent;
+        > img {
+            width: 80%;
+        }
+    }
+
 }
 </style>

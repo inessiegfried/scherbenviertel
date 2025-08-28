@@ -32,13 +32,43 @@
 
 <style>
 #grid {
-    display: grid;
-    grid-template-columns: 1fr 3fr;
-    gap: 2rem;
-    max-width: 840px;
+    justify-self: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10%;
+    max-width: calc(800px + 240px);
 }
 
-.img-with-header > img {
-    width: 100%;
+.img-with-header {
+    max-width: 400px;
+    min-width: 200px;
+    text-align: center;
+    
+    > img {
+        width: 100%;
+    }
+
+    > h2 {
+        padding: 0;
+        margin: 0;
+    }
+}
+
+@media (max-width: 600px) {
+    #grid {
+        flex-direction: column-reverse;
+        margin-top: 30px;
+    }
+
+    .img-with-header {
+        text-align: center;
+
+        > img {
+            width: 80%;
+        }
+    }
+
 }
 </style>
