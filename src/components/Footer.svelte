@@ -3,7 +3,7 @@ import {link} from "svelte-spa-router"
 </script>
 
 <footer>
-    <a use:link href="/kontakt">Scherbenviertel - Ines Siegfried</a>
+    <a use:link href="/kontakt">SCHERBENVIERTEL - Ines Siegfried</a>
 </footer>
 
 <style>
