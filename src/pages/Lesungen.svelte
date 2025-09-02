@@ -1,16 +1,25 @@
 <script>
   import FlyerURL from "@pdfs/Flyer-TheoSounds.pdf?url"
   import Card from "@components/Card.svelte"
+  import TwoCols from "@components/TwoCols.svelte"
+
+  import imgUrl from "@img/ines.jpg?url"
 </script>
 
 
-<div class="card-container">
+<TwoCols>
+  <div slot="first" class="hide-sm">
+        <img src={imgUrl} alt="Bild der Authorin"/>
+  </div>
+<div slot="second" class="card-container">
   <Card>
     <div slot="header"><span>Sonntag, 26. Oktober</span><span>17.00 Uhr</span></div>
     <div slot="body">
-      <div>Herbst-Neuerscheinungen</div>
-      <div>organisiert von lokal lesen in der Allgemeinen
-        Lesegesellschaft Basel</div>
+      <strong>Herbst-Neuerscheinungen</strong>
+      <p>
+          Organisiert von lokal lesen in der Allgemeinen
+        Lesegesellschaft Basel
+      </p>
     </div>
   </Card>
   <Card>
@@ -18,9 +27,10 @@
       <span>Mittwoch, 29. Oktober 2025</span><span>19.30 Uhr</span>
     </div>
     <div slot="body">
-      <div>
-     mit musikalischer Begleitung des Günther-Schürmann Duos im Rahmen der TheoSounds in der Theodorskirche
-      </div>
+      <p>
+     Mit musikalischer Begleitung des Günther-Schürmann Duos im Rahmen der
+          TheoSounds in der Theodorskirche Basel.
+      </p>
       <div>
         <a href={FlyerURL}>Flyer</a>
       </div>
@@ -29,10 +39,11 @@
   <Card>
     <div slot="header"><span>Mittwoch, 19. November 2025</span><span>19.00 Uhr</span></div>
     <div slot="body">
-      im Karthäusersaal des Waisenhauses
+      Im Karthäusersaal des Bürgerlichen Waisenhauses Basel.
     </div>
   </Card>
 </div>
+</TwoCols>
 
 <style>
 .card-container {

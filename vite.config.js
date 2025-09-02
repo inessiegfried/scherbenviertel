@@ -13,7 +13,7 @@ export default defineConfig({
     svelte(),
   ],
   assetsInclude: ['/public/pdfs/*.pdf'],
-  base: '/homepage/',
+  base: '/scherbenviertel/',
   build: {
     outDir: 'dist'
   },

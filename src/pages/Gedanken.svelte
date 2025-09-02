@@ -1,9 +1,14 @@
 <script>
     import Detail from "../components/Details.svelte"
+    import TwoCols from "@components/TwoCols.svelte"
 </script>
 
 
-<div class="grid">
+<TwoCols>
+    <div slot="first" class="fancy-bottom">
+        Jeden Monat eine neue Geschichte, jeden Monat ein neuer Gedanke.
+    </div>
+    <div slot="second" class="grid">
     <Detail>
     <summary slot="summary">Im Viereck</summary>
     <section slot="content">
@@ -104,7 +109,7 @@
     </section>
     </Detail>
 
-    <Detail>
+    <Detail open={true}>
     <summary slot="summary">Wiederbeleben</summary>
     <section slot="content">
         <p>
@@ -202,12 +207,20 @@
         </p>
     </section>
     </Detail>
-
-</div>
+    </div>
+</TwoCols>
 
 <style>
 .grid {
     display: flex;
     flex-direction: column;
+    gap: 1em;
+    width: min(720px, 100%);
+    margin-bottom: 2rem;
+}
+
+.fancy-bottom {
+    padding-bottom: 2em;
+    margin-bottom: 2em;
 }
 </style>

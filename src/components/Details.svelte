@@ -2,6 +2,7 @@
     import {onMount} from 'svelte';
     
     let detail;
+    let { open = false } = $props()
 
     onMount(() => {
 
@@ -35,15 +36,37 @@
 </script>
 
 
-<details bind:this={detail}>
+<details bind:this={detail} open={open}>
   <slot name="summary" />
   <slot name="content" />
 </details>
 
 <style>
+
+details {
+  width: min(720px, 100%);
+  box-shadow: 6px 3px 12px var(--teal);
+  transition: box-shadow 400ms ease;
+}
+
+details:hover {
+    box-shadow: 6px 3px 18px var(--teal);
+}
+
 details :global([slot="summary"]) {
   font-size: 1.5em;
   font-weight: bold;
+  color: var(--yellow);
+  background-color: hsl(from var(--teal) h s l / 0.2);
+  width: 100%;
+  padding-left: 1em;
 }
 
+details :global([slot="summary"])::marker {
+    color: var(--teal);
+}
+
+details :global([slot="content"]) {
+  padding: 1em;
+}
 </style>
