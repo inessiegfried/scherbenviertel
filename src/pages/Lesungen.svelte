@@ -39,7 +39,7 @@
   <Card>
     <div slot="header"><span>Mittwoch, 19. November 2025</span><span>19.00 Uhr</span></div>
     <div slot="body">
-      Im Karthäusersaal des Bürgerlichen Waisenhauses Basel.
+      Im Kartäusersaal des Bürgerlichen Waisenhauses Basel.
     </div>
   </Card>
 </div>
