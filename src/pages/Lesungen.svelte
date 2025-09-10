@@ -3,7 +3,7 @@
   import Card from "@components/Card.svelte"
   import TwoCols from "@components/TwoCols.svelte"
 
-  import imgUrl from "@img/ines.jpg?url"
+  import imgUrl from "@img/ines4.jpg?url"
 </script>
 
 

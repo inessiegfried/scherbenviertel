@@ -2,6 +2,7 @@
   import { location } from "svelte-spa-router";
 
   import Home from "./pages/Home.svelte";
+  import Aktuell from "./pages/Aktuell.svelte";
   import Scherbenviertel from "./pages/Scherbenviertel.svelte";
   import Lesungen from "./pages/Lesungen.svelte";
   import Gedanken from "./pages/Gedanken.svelte";
@@ -15,6 +16,7 @@
 
   const routes = {
     "/": Home,
+    "/aktuell": Aktuell,
     "/scherbenviertel": Scherbenviertel,
     "/lesungen": Lesungen,
     "/gedanken": Gedanken,
@@ -23,7 +25,8 @@
   };
 
   const pageNames = {
-    "/": "Aktuell",
+    "/": "Home",
+    "/aktuell": "Aktuell",
     "/scherbenviertel": "Scherbenviertel",
     "/lesungen": "Lesungen",
     "/gedanken": "Gedanken & Geschichten",

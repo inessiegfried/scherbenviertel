@@ -26,7 +26,7 @@
 
 <aside id="side-menu" class:open={isMenuOpen} bind:this={menu}>
   <ul id="menu">
-    <li><a href="/" use:link on:click={closeMenu}>Aktuell</a></li>
+    <li><a href="/aktuell" use:link on:click={closeMenu}>Aktuell</a></li>
     <li><a href="/scherbenviertel" use:link on:click={closeMenu}>Scherbenviertel</a></li>
     <li><a href="/lesungen" use:link on:click={closeMenu}>Lesungen</a></li>
     <li><a href="/gedanken" use:link on:click={closeMenu}>Gedanken und Geschichten</a></li>
