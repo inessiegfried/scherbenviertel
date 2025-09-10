@@ -1,11 +1,30 @@
 <script>
+  import {onMount, onDestroy} from "svelte"
   import {link} from "svelte-spa-router"
+
+  let menu;
 
   export let isMenuOpen;
   export let closeMenu;
+
+  onMount(() => {
+    function handleClickOutsideEvent(e) {
+      const menuButton = document.getElementById("menu-button")
+      if (menu && !menu.contains(e.target) && !menuButton.contains(e.target)) {
+        closeMenu()
+      }
+    }
+
+    document.addEventListener("click", handleClickOutsideEvent)
+    onDestroy(() => {
+      document.removeEventListener("click", handleClickOutsideEvent)
+    })
+  })
+
+  
 </script>
 
-<aside id="side-menu" class:open={isMenuOpen}>
+<aside id="side-menu" class:open={isMenuOpen} bind:this={menu}>
   <ul id="menu">
     <li><a href="/" use:link on:click={closeMenu}>Aktuell</a></li>
     <li><a href="/scherbenviertel" use:link on:click={closeMenu}>Scherbenviertel</a></li>
