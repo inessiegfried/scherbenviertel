@@ -13,7 +13,7 @@
     <li><a href="/aktuell" use:link>Aktuell</a></li>
     <li><a href="/scherbenviertel" use:link>Scherbenviertel</a></li>
     <li><a href="/lesungen" use:link>Lesungen</a></li>
-    <li><a href="/gedanken" use:link>Gedanken und Geschichten</a></li>
+    <li><a href="/gedanken" use:link>Geschichten</a></li>
     <li><a href="/vita" use:link>Vita</a></li>
     <li><a href="/kontakt" use:link>Kontakt</a></li>
 <ul>

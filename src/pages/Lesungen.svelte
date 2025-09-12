@@ -1,5 +1,6 @@
 <script>
   import FlyerURL from "@pdfs/Flyer-TheoSounds.pdf?url"
+  import FlyerWaisenhausURL from "@pdfs/Flyer-Waisenhaus.pdf?url"
   import Card from "@components/Card.svelte"
   import TwoCols from "@components/TwoCols.svelte"
 
@@ -40,6 +41,9 @@
     <div slot="header"><span>Mittwoch, 19. November 2025</span><span>19.00 Uhr</span></div>
     <div slot="body">
       Im Kartäusersaal des Bürgerlichen Waisenhauses Basel.
+      <div>
+        <a href={FlyerWaisenhausURL}>Flyer</a>
+      </div>
     </div>
   </Card>
 </div>
@@ -50,5 +54,9 @@
   display: flex;
   flex-direction: column;
   gap: 2rem;
+}
+
+.card-container:last-child {
+    margin-bottom: 3em;
 }
 </style>

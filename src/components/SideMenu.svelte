@@ -29,7 +29,7 @@
     <li><a href="/aktuell" use:link on:click={closeMenu}>Aktuell</a></li>
     <li><a href="/scherbenviertel" use:link on:click={closeMenu}>Scherbenviertel</a></li>
     <li><a href="/lesungen" use:link on:click={closeMenu}>Lesungen</a></li>
-    <li><a href="/gedanken" use:link on:click={closeMenu}>Gedanken und Geschichten</a></li>
+    <li><a href="/gedanken" use:link on:click={closeMenu}>Geschichten</a></li>
     <li><a href="/vita" use:link on:click={closeMenu}>Vita</a></li>
     <li><a href="/kontakt" use:link on:click={closeMenu}>Kontakt</a></li>
   </ul>
@@ -47,6 +47,7 @@
     transition: transform 0.3s ease;
     transform: translateX(100%);
     padding: 1rem;
+    padding-right: 2em;
   }
 
   aside.open {

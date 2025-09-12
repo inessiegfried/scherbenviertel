@@ -29,7 +29,7 @@
     "/aktuell": "Aktuell",
     "/scherbenviertel": "Scherbenviertel",
     "/lesungen": "Lesungen",
-    "/gedanken": "Gedanken & Geschichten",
+    "/gedanken": "Geschichten",
     "/vita": "Vita",
     "/kontakt": "Kontakt",
   };
