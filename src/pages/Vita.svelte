@@ -5,6 +5,7 @@
 
 <TwoCols>
     <div slot="first">
+        <h2 class="hide-sm">Ines Siegfried</h2>
         <img src={imgUrl} alt="Bild der Authorin" />
     </div>
     <section slot="second">
@@ -33,6 +34,6 @@
 
 <style>
 li { margin-bottom: 1em;}
-ul {padding-left: 0;}
+ul {padding-left: 0; margin-block: 0;}
 </style>
 

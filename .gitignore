@@ -24,3 +24,5 @@ dist-ssr
 *.sw?
 Homepage.pptx
 *.docx
+
+!assets/*.pdf

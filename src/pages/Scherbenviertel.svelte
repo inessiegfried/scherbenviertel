@@ -6,7 +6,7 @@
 <TwoCols>
     <div slot="first">
         <img src={imgUrl} alt="Buch Cover"/>
-        <p class="text-center text-yellow text-mono">
+        <p class="fs-14 text-center text-yellow text-mono">
         ISBN 978-3-906199-33-7
         </p>
     </div>
@@ -25,3 +25,9 @@
         </p>
     </section>
 </TwoCols>
+
+<style>
+.fs-14 {
+  font-size: 14pt;
+}
+</style>
