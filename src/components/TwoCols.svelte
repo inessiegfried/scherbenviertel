@@ -32,7 +32,7 @@
         width: min(300px, 100%);
         text-align: center;
         flex-shrink: 0;
-        min-height: var(--body-height);
+        align-self: flex-start;
 
         position: sticky;
         top: 0;
@@ -41,11 +41,7 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-
-        > h2 {
-            padding: 0;
-            margin: 0;
-        }
+        min-height: var(--body-height);
     }
 
     .second-col {
@@ -59,29 +55,20 @@
 
     @media (max-width: 600px) {
         .first-col {
-            position: relative;
+            position: relative; /* Damit position: sticky; aufgehoben ist. */
             width: 100%;
+            height: fit-content;
         }
 
         .second-col {
             width: 100%;
         }
 
-        .hide-sm {
-            display: none;
-        }
-
         .two-cols {
             flex-direction: column;
             margin-top: 30px;
-        }
-
-        :global([slot="first"]) {
-            text-align: center;
-
-            > img {
-                width: 80%;
-            }
+            /*min-height: var(--body-height);*/
+            height: fit-content;
         }
     }
 </style>

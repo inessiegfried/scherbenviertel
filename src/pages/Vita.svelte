@@ -5,7 +5,6 @@
 
 <TwoCols id="vita" title="Vita">
     {#snippet first()}
-        <h2 class="hide-sm">Ines Siegfried</h2>
         <img src={imgUrl} alt="Bild der Authorin" />
     {/snippet}
     {#snippet second()}

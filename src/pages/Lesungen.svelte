@@ -62,9 +62,6 @@
         display: flex;
         flex-direction: column;
         gap: 2rem;
-    }
-
-    .card-container:last-child {
-        margin-bottom: 3em;
+        margin-block: 3em;
     }
 </style>

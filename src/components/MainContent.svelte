@@ -49,9 +49,7 @@
         height: var(--body-height);
         padding-top: var(--header-height);
         padding: 0;
-        margin-top: 0;
         align-items: center;
-        gap: 2rem;
         scroll-snap-type: y mandatory;
     }
 
@@ -75,5 +73,11 @@
             var(--base-color),
             var(--base-color-darker)
         );
+    }
+
+    @media (width < 900px) {
+        .content-grid {
+            grid-template-columns: [full-width-start] 10px [breakout-start] 50px [content-start] 1fr [content-end] 50px [breakout-end] 10px [full-width-end];
+        }
     }
 </style>

@@ -10,7 +10,7 @@
         </div>
     {/snippet}
     {#snippet second()}
-        <div class="grid">
+        <div class="story-container">
             <Detail open={true}>
                 <summary slot="summary">Im Viereck</summary>
                 <section slot="content">
@@ -223,12 +223,12 @@
 </TwoCols>
 
 <style>
-    .grid {
+    .story-container {
         display: flex;
         flex-direction: column;
         gap: 1em;
         width: min(720px, 100%);
-        margin-bottom: 2rem;
+        margin-block: 3em;
     }
 
     .fancy-bottom {
