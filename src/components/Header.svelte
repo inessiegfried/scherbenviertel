@@ -1,68 +1,68 @@
 <script>
-  export let currentPageName;
-  export let toggleMenu;
+    import { headerState } from "../sharedStates/headerState.svelte";
+
+    let { toggleMenu } = $props();
 </script>
 
 <nav>
-  <h1>{currentPageName}</h1>
+    <h1>{headerState.title}</h1>
 </nav>
-<!-- svelte-ignore a11y_consider_explicit_label -->
 <button id="menu-button" on:click={toggleMenu}></button>
 
 <style>
-  nav {
-    height: var(--header-height);
-    background-color: var(--base-color);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: bold;
-    font-size: 1.2em;
-    z-index: 1002;
-  }
+    nav {
+        height: var(--header-height);
+        background-color: var(--base-color);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        font-size: 1.2em;
+        z-index: 1002;
+    }
 
-  #menu-button {
-    display: block;
-    position: fixed;
-    width: var(--bookmark-width);
-    height: var(--bookmark-height);
-    background-color: var(--base-color);
-    top: 0;
-    right: var(--bookmark-right);
-    border: none;
-    cursor: pointer;
-    z-index: 1001;
-    animation: wiggle 5s linear 10s infinite;
-  }
+    #menu-button {
+        display: block;
+        position: fixed;
+        width: var(--bookmark-width);
+        height: var(--bookmark-height);
+        background-color: var(--base-color);
+        top: 0;
+        right: var(--bookmark-right);
+        border: none;
+        cursor: pointer;
+        z-index: 1001;
+        animation: wiggle 5s linear 10s infinite;
+    }
 
-  #menu-button::before {
-    content: "";
-    position: absolute;
-    bottom: -20px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 0;
-    height: 0;
-    border-left: 30px solid var(--base-color);
-    border-right: 30px solid var(--base-color);
-    border-bottom: 20px solid transparent;
-  }
+    #menu-button::before {
+        content: "";
+        position: absolute;
+        bottom: -20px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 0;
+        height: 0;
+        border-left: 30px solid var(--base-color);
+        border-right: 30px solid var(--base-color);
+        border-bottom: 20px solid transparent;
+    }
 
-  @keyframes wiggle {
-    0% {
-      rotate: 0deg;
+    @keyframes wiggle {
+        0% {
+            rotate: 0deg;
+        }
+        2% {
+            rotate: 5deg;
+        }
+        6% {
+            rotate: -5deg;
+        }
+        8% {
+            rotate: 0deg;
+        }
+        100% {
+            rotate: 0deg;
+        }
     }
-    2% {
-      rotate: 5deg;
-    }
-    6% {
-      rotate: -5deg;
-    }
-    8% {
-      rotate: 0deg;
-    }
-    100% {
-      rotate: 0deg;
-    }
-  }
 </style>

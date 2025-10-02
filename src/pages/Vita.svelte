@@ -1,14 +1,14 @@
 <script>
-  import imgUrl from "/img/ines2.jpg"
-  import TwoCols from "@components/TwoCols.svelte"
+    import imgUrl from "/img/ines2.jpg";
+    import TwoCols from "@components/TwoCols.svelte";
 </script>
 
-<TwoCols>
-    <div slot="first">
+<TwoCols id="vita" title="Vita">
+    {#snippet first()}
         <h2 class="hide-sm">Ines Siegfried</h2>
         <img src={imgUrl} alt="Bild der Authorin" />
-    </div>
-    <section slot="second">
+    {/snippet}
+    {#snippet second()}
         <ul>
             <li>
                 Ines Siegfried, geboren 1963 in Basel, studierte Deutsch,
@@ -22,18 +22,18 @@
                 Gymnasiallehrerin und Dozentin in Bern und unterrichtet seit 14
                 Jahren Deutsch und Geschichte am Gymnasium Muttenz.
             </li>
-            <li>
-                Die Autorin lebt in Basel.
-            </li>
-            <li>
-                SCHERBENVIERTEL ist ihr literarisches Debut.
-            </li>
+            <li>Die Autorin lebt in Basel.</li>
+            <li>SCHERBENVIERTEL ist ihr literarisches Debut.</li>
         </ul>
-    </section>
+    {/snippet}
 </TwoCols>
 
 <style>
-li { margin-bottom: 1em;}
-ul {padding-left: 0; margin-block: 0;}
+    li {
+        margin-bottom: 1em;
+    }
+    ul {
+        padding-left: 0;
+        margin-block: 0;
+    }
 </style>
-
