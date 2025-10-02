@@ -33,14 +33,14 @@
     });
 </script>
 
-<main id="main-container" class="main-container">
+<main id="main-container" class="main-container content-grid">
     <Home />
-    <Aktuell />
+    <div class="full-width content-grid"><Aktuell /></div>
     <Scherbenviertel />
-    <Lesungen />
+    <div class="full-width content-grid"><Lesungen /></div>
     <Vita />
-    <Kontakt />
-    <Gedanken />
+    <div class="full-width content-grid"><Kontakt /></div>
+    <div class="breakout"><Gedanken /></div>
 </main>
 
 <style>
@@ -50,10 +50,30 @@
         padding-top: var(--header-height);
         padding: 0;
         margin-top: 0;
-        display: flex;
-        flex-direction: column;
         align-items: center;
         gap: 2rem;
         scroll-snap-type: y mandatory;
+    }
+
+    .content-grid {
+        display: grid;
+        grid-template-columns: [full-width-start] 100px [breakout-start] 100px [content-start] 1fr [content-end] 100px [breakout-end] 100px [full-width-end];
+    }
+
+    :global(.content-grid > *) {
+        grid-column: content;
+    }
+
+    .breakout {
+        grid-column: breakout;
+    }
+
+    .full-width {
+        grid-column: full-width;
+        background: radial-gradient(
+            circle at center,
+            var(--base-color),
+            var(--base-color-darker)
+        );
     }
 </style>

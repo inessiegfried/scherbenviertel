@@ -14,11 +14,10 @@
         display: flex;
         flex-direction: row;
         justify-content: center;
-        align-items: flex-start;
+        align-items: center;
         gap: 10%;
         width: 100%;
-        max-width: calc(800px + 240px);
-        padding-bottom: 2rem;
+        min-height: var(--body-height);
     }
 
     .two-cols:nth-child(2n) {
