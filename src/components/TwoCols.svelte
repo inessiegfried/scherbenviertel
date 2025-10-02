@@ -19,7 +19,14 @@
         width: 100%;
         max-width: calc(800px + 240px);
         padding-bottom: 2rem;
-        border-bottom: 1px solid var(--yellow);
+    }
+
+    .two-cols:nth-child(2n) {
+        background: radial-gradient(
+            circle at center,
+            var(--base-color),
+            var(--base-color-darker)
+        );
     }
 
     .first-col {

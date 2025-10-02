@@ -1,77 +1,77 @@
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
-
 :root {
-  interpolate-size: allow-keywords;
+    interpolate-size: allow-keywords;
 
-  --header-height: 59px;
-  --footer-height: 45px;
-  --body-height: calc(100dvh - var(--header-height) - var(--footer-height));
-  --bookmark-height: calc(var(--header-height) + 40px);
-  --bookmark-width: 60px;
-  --bookmark-right: 5%;
-  --bookmark-left: calc(var(--bookmark-right) + var(--bookmark-width));
+    --header-height: 59px;
+    --footer-height: 45px;
+    --body-height: calc(100dvh - var(--header-height) - var(--footer-height));
+    --bookmark-height: calc(var(--header-height) + 40px);
+    --bookmark-width: 60px;
+    --bookmark-right: 5%;
+    --bookmark-left: calc(var(--bookmark-right) + var(--bookmark-width));
 
-  /* Hier werden die Grundfarben definiert. */
-  --purple: hsl(320, 80%, 28%);
-  --blue: hsl(203, 100%, 27%);
-  --teal: hsl(139, 38%, 78%);
-  --yellow: hsl(52, 100%, 50%);
-  --white: #dbdbdb;
-  --black: #000;
+    /* Hier werden die Grundfarben definiert. */
+    --purple: hsl(320, 80%, 28%);
+    --blue: hsl(203, 100%, 27%);
+    --teal: hsl(139, 38%, 78%);
+    --yellow: hsl(52, 100%, 50%);
+    --white: #dbdbdb;
+    --black: #000;
 
-  --base-color: var(--blue);
-  --base-color-darker: hsl(from var(--base-color) calc(h - 20) s calc(l - 20));
-  --base-color-dark: hsl(from var(--base-color) calc(h - 30) s calc(l - 10));
-  --base-color-light: hsl(from var(--base-color) h s calc(l + 20)); 
-  
-  /* This is the default font size, everything should be relative to this.
+    --base-color: var(--blue);
+    --base-color-darker: hsl(
+        from var(--base-color) calc(h - 20) s calc(l - 20)
+    );
+    --base-color-dark: hsl(from var(--base-color) calc(h - 30) s calc(l - 10));
+    --base-color-light: hsl(from var(--base-color) h s calc(l + 20));
+
+    /* This is the default font size, everything should be relative to this.
      We use rem units here, to respect the defaults of the user. If a user
      changes his fontsize in the browser, we automatically adjust to this
      with the root-em unit.
      TODO: Could make sense to overwrite this one, since the styling is
      very specific for this website. */
-  --font-size: 1.5rem;
+    --font-size: 1.5rem;
 
-  /* Add more font options here, find a good one that looks very nice. */
-  --font-family: Arimo sans-serif;
+    /* Add more font options here, find a good one that looks very nice. */
+    --font-family: Arimo sans-serif;
 
-  /* Setting the font weight for the default font.
+    /* Setting the font weight for the default font.
      The default is 400, but we can go up until 900 if we want. */
-  --font-weight: 400;
+    --font-weight: 400;
 
-  /* The default font color for the whole page is set with this one. */
-  --font-color: var(--white);
-  --title-color: var(--yellow);
+    /* The default font color for the whole page is set with this one. */
+    --font-color: var(--white);
+    --title-color: var(--yellow);
 
-  /* This here controls the default height of a line. It is a value without
+    /* This here controls the default height of a line. It is a value without
      a unit, and stretches the font-size by this value to get the line-height.
      Default: 1.4 */
-  --line-height: 1.6;
+    --line-height: 1.6;
 }
 
 ::-webkit-scrollbar {
-  width: clamp(5px, 0.5em, 10px);
+    width: clamp(5px, 0.5em, 10px);
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--base-color-dark);
+    background: #00000000;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--base-color);
+    background: var(--base-color);
 }
 
 body {
     margin: 0;
     padding: 0;
-    overflow: hidden;
     background: radial-gradient(
-      circle at center,
-      var(--base-color),
-      var(--base-color-dark)
+        circle at center,
+        var(--base-color),
+        var(--base-color-dark)
     );
     font-family: var(--font-family);
     font-size: var(--font-size);
@@ -82,68 +82,68 @@ body {
     hyphens: auto;
 }
 
-h1, h2, h3 {
-  color: var(--title-color);
+h1,
+h2,
+h3 {
+    color: var(--title-color);
 }
 
 .italic {
-  font-style: italic;
+    font-style: italic;
 }
 
 .text-center {
-  text-align: center;
+    text-align: center;
 }
 
 .text-yellow {
-  color: var(--yellow);
+    color: var(--yellow);
 }
 
 .text-mono {
-  font-family: monospace;
+    font-family: monospace;
 }
 
 ul {
-  list-style: none;
+    list-style: none;
 }
 
 li {
-  position: relative;
-  padding-left: 1.5rem;
+    position: relative;
+    padding-left: 1.5rem;
 }
 
 a {
-  color: var(--yellow);
+    color: var(--yellow);
 }
 
 a:visited {
-  color: hsl(from var(--yellow) h calc(s - 50) calc(l + 20));
+    color: hsl(from var(--yellow) h calc(s - 50) calc(l + 20));
 }
 
 li::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  transform: translateY(100%);
-  width: 0;
-  height: 0;
-  border-left: 8px solid var(--base-color-light);
-  border-top: 6px solid transparent;
-  border-bottom: 6px solid transparent;
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: translateY(100%);
+    width: 0;
+    height: 0;
+    border-left: 8px solid var(--base-color-light);
+    border-top: 6px solid transparent;
+    border-bottom: 6px solid transparent;
 }
 
 @media (max-width: 600px) {
+    :root {
+        --font-size: 1rem;
+    }
 
-  :root {
-    --font-size: 1rem;
-  }
+    .hide-sm {
+        display: none;
+    }
 
-  .hide-sm {
-    display: none;
-  }
-
-
-  li::before {
-    transform: translateY(50%);
-  }
+    li::before {
+        transform: translateY(50%);
+    }
 }
