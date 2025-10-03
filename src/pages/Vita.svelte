@@ -33,6 +33,6 @@
     }
     ul {
         padding-left: 0;
-        margin-block: 0;
+        margin-block: 2em;
     }
 </style>

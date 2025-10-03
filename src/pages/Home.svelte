@@ -11,14 +11,10 @@
         </div>
     {/snippet}
     {#snippet second()}
-        <ul>
-            <li><a href="#aktuell">Aktuell</a></li>
-            <li><a href="#scherbenviertel">Scherbenviertel</a></li>
-            <li><a href="#lesungen">Lesungen</a></li>
-            <li><a href="#gedanken">Geschichten</a></li>
-            <li><a href="#vita">Vita</a></li>
-            <li><a href="#kontakt">Kontakt</a></li>
-        </ul>
+        <p class="italic">
+            Nichts Schönres unter der Sonne als unter der Sonne zu sein.
+        </p>
+        <p>Ingeborg Bachmann</p>
     {/snippet}
 </TwoCols>
 

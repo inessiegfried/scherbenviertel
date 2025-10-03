@@ -24,12 +24,11 @@
         display: flex;
         flex-direction: column;
         gap: 1em;
-        width: min(720px, 100%);
         margin-block: 3em;
     }
 
     .fancy-bottom {
-        padding-bottom: 2em;
+        margin-top: 2em;
         margin-bottom: 2em;
     }
 </style>

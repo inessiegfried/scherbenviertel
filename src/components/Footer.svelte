@@ -1,5 +1,5 @@
 <footer>
-    <a href="#scherbenviertel">SCHERBENVIERTEL</a>
+    <a href="#home">&#8593; Zur Startseite &#8593;</a>
 </footer>
 
 <style>

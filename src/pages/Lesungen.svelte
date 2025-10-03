@@ -21,7 +21,7 @@
                 <div slot="body">
                     <strong>Herbst-Neuerscheinungen</strong>
                     <p>
-                        Organisiert von lokal lesen in der Allgemeinen
+                        Wird organisiert von lokal lesen in der Allgemeinen
                         Lesegesellschaft Basel.
                     </p>
                     <div>
