@@ -104,6 +104,10 @@ h3 {
     font-family: monospace;
 }
 
+.small-text {
+    font-size: 0.9rem;
+}
+
 ul {
     list-style: none;
 }

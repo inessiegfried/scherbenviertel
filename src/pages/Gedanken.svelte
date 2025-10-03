@@ -1,5 +1,4 @@
 <script>
-    import Detail from "@components/Details.svelte";
     import TwoCols from "@components/TwoCols.svelte";
     import ImViereck from "../stories/ImViereck.svelte";
     import Praepositionen from "../stories/Praepositionen.svelte";
@@ -8,9 +7,7 @@
 
 <TwoCols id="gedanken" title="Geschichten">
     {#snippet first()}
-        <div class="fancy-bottom">
-            Jeden Monat eine neue Geschichte, jeden Monat ein neuer Gedanke.
-        </div>
+        <div class="fancy-bottom">Jeden Monat eine neue Geschichte.</div>
     {/snippet}
     {#snippet second()}
         <div class="story-container">

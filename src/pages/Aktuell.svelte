@@ -7,6 +7,10 @@
     {#snippet first()}
         <div class="img-wrapper">
             <img src={imgUrl} alt="Bild vom Waisenhaus" />
+            <p class="italic small-text">
+                Waisenknaben im Hof des Waisenhauses um 1870. Staatsarchiv
+                Basel-Stadt. StABS, AL 45, 1-58.
+            </p>
         </div>
     {/snippet}
     {#snippet second()}
@@ -19,8 +23,8 @@
             Kopf.
         </p>
         <p>
-            Im Herbst 2025 erscheint die historische Erzählung SCHERBENVIERTEL
-            im eFeF-Verlag.
+            Die historische Erzählung SCHERBENVIERTEL erscheint am 17. Oktober
+            2025 im eFeF-Verlag.
         </p>
     {/snippet}
 </TwoCols>
