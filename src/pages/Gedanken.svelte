@@ -3,7 +3,7 @@
     import TwoCols from "@components/TwoCols.svelte";
 </script>
 
-<TwoCols id="gedanken" title="Gedanken">
+<TwoCols id="gedanken" title="Geschichten">
     {#snippet first()}
         <div class="fancy-bottom">
             Jeden Monat eine neue Geschichte, jeden Monat ein neuer Gedanke.
