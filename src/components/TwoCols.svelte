@@ -18,6 +18,9 @@
         width: 100%;
     }
 
+    :global(.first-col:has(div.wide)) {
+        width: min(550px, 100%);
+    }
     .first-col {
         width: min(300px, 100%);
         flex-shrink: 0;

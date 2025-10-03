@@ -6,7 +6,7 @@
 
 <TwoCols id="home" title="Ines Siegfried">
     {#snippet first()}
-        <div class="img-wrapper">
+        <div class="wide img-wrapper">
             <img src={imgUrl} alt="Bild der Authorin" />
         </div>
     {/snippet}
@@ -30,7 +30,7 @@
     }
 
     .img-wrapper > img {
-        width: clamp(240px, 100%, 640px);
+        width: clamp(240px, 100%, 840px);
         min-height: 400px;
         object-fit: cover;
         object-position: center;
