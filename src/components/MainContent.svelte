@@ -34,11 +34,11 @@
 </script>
 
 <main id="main-container" class="main-container content-grid">
-    <Home />
+    <div><Home /></div>
     <div class="full-width content-grid"><Aktuell /></div>
-    <Scherbenviertel />
+    <div><Scherbenviertel /></div>
     <div class="full-width content-grid"><Lesungen /></div>
-    <Vita />
+    <div><Vita /></div>
     <div class="full-width content-grid"><Kontakt /></div>
     <div class="breakout"><Gedanken /></div>
 </main>
