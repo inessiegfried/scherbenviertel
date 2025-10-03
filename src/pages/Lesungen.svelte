@@ -1,6 +1,7 @@
 <script>
     import FlyerURL from "@pdfs/Flyer-TheoSounds.pdf?url";
     import FlyerWaisenhausURL from "@pdfs/Flyer-Waisenhaus.pdf?url";
+    import FlyerHerbstlese from "@pdfs/Flyer-Herbstlese.pdf?url";
     import Card from "@components/Card.svelte";
     import TwoCols from "@components/TwoCols.svelte";
 
@@ -23,6 +24,9 @@
                         Organisiert von lokal lesen in der Allgemeinen
                         Lesegesellschaft Basel.
                     </p>
+                    <div>
+                        <a href={FlyerHerbstlese}>Flyer</a>
+                    </div>
                 </div>
             </Card>
             <Card>
