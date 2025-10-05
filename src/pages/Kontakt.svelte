@@ -10,8 +10,8 @@
     {#snippet second()}
         <ul>
             <li>
-                <a href="mailto:ines.siegfried@bluewin.ch">
-                    ines.siegfried@bluewin.ch
+                <a href="mailto:contact@inessiegfried.ch">
+                    contact@inessiegfried.ch
                 </a>
             </li>
             <li>

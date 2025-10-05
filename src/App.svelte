@@ -52,7 +52,7 @@
     <Header {currentPageName} {toggleMenu} />
     <SideMenu {isMenuOpen} {closeMenu} />
     <MainContent {routes} />
-    <Footer />
+    <!-- <Footer /> -->
 </div>
 
 <style>

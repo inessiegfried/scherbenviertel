@@ -1,8 +1,12 @@
 <script>
-    let { first, second, id, title } = $props();
+    let { first, second, id, title, breakout = false } = $props();
 </script>
 
-<div {id} class="two-cols" data-title={title}>
+<div
+    {id}
+    class={breakout ? "two-cols breakout" : "two-cols"}
+    data-title={title}
+>
     <div class="first-col">{@render first?.()}</div>
     <div class="second-col">{@render second?.()}</div>
 </div>

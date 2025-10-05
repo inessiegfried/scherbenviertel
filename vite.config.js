@@ -11,7 +11,7 @@ function generateAlias(absolutePath) {
 export default defineConfig({
   plugins: [svelte()],
   assetsInclude: ["/public/pdfs/*.pdf"],
-  base: "/scherbenviertel/",
+  base: "/",
   build: {
     outDir: "dist",
   },

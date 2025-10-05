@@ -8,7 +8,7 @@
     import imgUrl from "@img/ines4.jpg?url";
 </script>
 
-<TwoCols id="lesungen" title="Lesungen">
+<TwoCols id="lesungen" title="Lesungen" breakout={true}>
     {#snippet first()}
         <img src={imgUrl} alt="Bild der Authorin" />
     {/snippet}

@@ -4,7 +4,7 @@
     import { link } from "svelte-spa-router";
 </script>
 
-<TwoCols id="home" title="Ines Siegfried">
+<TwoCols id="home" title="Ines Siegfried" breakout={true}>
     {#snippet first()}
         <div class="wide img-wrapper">
             <img src={imgUrl} alt="Bild der Authorin" />

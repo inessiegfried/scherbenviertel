@@ -6,7 +6,7 @@
     interpolate-size: allow-keywords;
 
     --header-height: 59px;
-    --footer-height: 45px;
+    --footer-height: 0px; /*45px;*/
     --body-height: calc(100dvh - var(--header-height) - var(--footer-height));
     --bookmark-height: calc(var(--header-height) + 40px);
     --bookmark-width: 60px;

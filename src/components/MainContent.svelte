@@ -62,7 +62,7 @@
         grid-column: content;
     }
 
-    .breakout {
+    :global(.breakout) {
         grid-column: breakout;
     }
 
@@ -75,7 +75,7 @@
         );
     }
 
-    @media (width < 900px) {
+    @media (width <= 1024px) {
         .content-grid {
             grid-template-columns: [full-width-start] 10px [breakout-start] 50px [content-start] 1fr [content-end] 50px [breakout-end] 10px [full-width-end];
         }
