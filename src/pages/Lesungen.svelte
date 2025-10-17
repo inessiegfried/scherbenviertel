@@ -57,6 +57,14 @@
                     </div>
                 </div>
             </Card>
+            <Card>
+                <div slot="header">
+                    <span>Mittwoch, 4. Februar 2026</span><span>19.30 Uhr</span>
+                </div>
+                <div slot="body">
+                    In der Kantonsbibliothek Baselland, Liestal.
+                </div>
+            </Card>
         </div>
     {/snippet}
 </TwoCols>
