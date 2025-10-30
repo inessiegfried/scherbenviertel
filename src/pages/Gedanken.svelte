@@ -11,9 +11,9 @@
     {/snippet}
     {#snippet second()}
         <div class="story-container">
-            <ImViereck open={true} show={true} />
+            <ImViereck open={false} show={true} />
             <!-- TODO: Ändere show und open um andere Geschichten zu zeigen. -->
-            <Praepositionen open={false} show={false} />
+            <Praepositionen open={true} show={true} />
             <Wiederbeleben open={false} show={false} />
         </div>
     {/snippet}

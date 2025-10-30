@@ -38,9 +38,9 @@
     <div class="full-width content-grid"><Aktuell /></div>
     <div><Scherbenviertel /></div>
     <div class="full-width content-grid"><Lesungen /></div>
-    <div><Vita /></div>
-    <div class="full-width content-grid"><Kontakt /></div>
     <div class="breakout"><Gedanken /></div>
+    <div class="full-width content-grid"><Vita /></div>
+    <div><Kontakt /></div>
 </main>
 
 <style>
