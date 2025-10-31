@@ -5,11 +5,13 @@
 
     import imgUrl from "@img/ines4.jpg?url";
     import imgVernissage from "@img/ines-vernissage.jpg?url";
+    import ImageSwitcher from "../components/ImageSwitcher.svelte";
 </script>
 
 <TwoCols id="lesungen" title="Lesungen" breakout={true}>
     {#snippet first()}
-        <img src={imgVernissage} alt="Bild der Authorin" />
+        <!-- <img src={imgVernissage} alt="Bild der Authorin" /> -->
+        <ImageSwitcher images={[imgUrl, imgVernissage]} />
     {/snippet}
     {#snippet second()}
         <div class="card-container">
