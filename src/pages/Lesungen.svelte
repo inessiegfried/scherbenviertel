@@ -24,7 +24,7 @@
                 <div slot="body">
                     Im Kartäusersaal des Bürgerlichen Waisenhauses Basel.
                     <div>
-                        <a href={FlyerWaisenhausURL}>Flyer</a>
+                        <a href={FlyerWaisenhausURL} target="_blank">Flyer</a>
                     </div>
                 </div>
             </Card>
