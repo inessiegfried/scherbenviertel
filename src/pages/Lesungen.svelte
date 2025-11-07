@@ -34,9 +34,16 @@
                 </div>
                 <div slot="body">
                     <p>
-                        Mit musikalischer Begleitung eines Gesangstrios in der
-                        Buchhandlung Merkel in Grenzach.
+                        Mit musikalischer Kommentierung durch das <span
+                            class="italic">trio someāl</span
+                        > in der Buchhandlung Merkel in Grenzach.
                     </p>
+                    <div>
+                        <a
+                            href="https://buchhandlung-merkel.de/event/lesung-mit-ines-siegfried/"
+                            target="_blank">Lesung</a
+                        >
+                    </div>
                 </div>
             </Card>
             <Card>
