@@ -1,5 +1,6 @@
 <script>
     import FlyerWaisenhausURL from "@pdfs/Flyer-Waisenhaus.pdf?url";
+    import FlyerRegion from "@pdfs/Flyer-Region.pdf?url";
     import Card from "@components/Card.svelte";
     import TwoCols from "@components/TwoCols.svelte";
 
@@ -46,12 +47,37 @@
                     </div>
                 </div>
             </Card>
+
+            <Card>
+                <div slot="header">
+                    <span>Donnerstag, 29. Januar 2026</span><span
+                        >19.30 Uhr</span
+                    >
+                </div>
+                <div slot="body">
+                    <p>In der Rössli Buchhandlung in Riehen.</p>
+                    <div>
+                        <a href={FlyerRegion} target="_blank">Flyer</a>
+                    </div>
+                </div>
+            </Card>
+
             <Card>
                 <div slot="header">
                     <span>Mittwoch, 4. Februar 2026</span><span>19.30 Uhr</span>
                 </div>
                 <div slot="body">
                     In der Kantonsbibliothek Baselland, Liestal.
+                </div>
+            </Card>
+
+            <Card>
+                <div slot="header">
+                    <span>Donnerstag, 16. April 2026</span><span>18.00 Uhr</span
+                    >
+                </div>
+                <div slot="body">
+                    In der GGG Stadtbibliothek im Schmiedenhof in Basel.
                 </div>
             </Card>
         </div>
