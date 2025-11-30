@@ -2,6 +2,7 @@
     import TwoCols from "@components/TwoCols.svelte";
     import ImViereck from "../stories/ImViereck.svelte";
     import Praepositionen from "../stories/Praepositionen.svelte";
+    import Gleis12 from "../stories/Gleis12.svelte";
     import Wiederbeleben from "../stories/Wiederbeleben.svelte";
 </script>
 
@@ -13,7 +14,8 @@
         <div class="story-container">
             <ImViereck open={false} show={true} />
             <!-- TODO: Ändere show und open um andere Geschichten zu zeigen. -->
-            <Praepositionen open={true} show={true} />
+            <Praepositionen open={false} show={true} />
+            <Gleis12 open={true} show={true} />
             <Wiederbeleben open={false} show={false} />
         </div>
     {/snippet}

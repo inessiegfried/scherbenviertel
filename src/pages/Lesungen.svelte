@@ -1,5 +1,4 @@
 <script>
-    import FlyerWaisenhausURL from "@pdfs/Flyer-Waisenhaus.pdf?url";
     import FlyerRegion from "@pdfs/Flyer-Region.pdf?url";
     import Card from "@components/Card.svelte";
     import TwoCols from "@components/TwoCols.svelte";
@@ -16,19 +15,6 @@
     {/snippet}
     {#snippet second()}
         <div class="card-container">
-            <Card>
-                <div slot="header">
-                    <span>Mittwoch, 19. November 2025</span><span
-                        >19.00 Uhr</span
-                    >
-                </div>
-                <div slot="body">
-                    Im Kartäusersaal des Bürgerlichen Waisenhauses Basel.
-                    <div>
-                        <a href={FlyerWaisenhausURL} target="_blank">Flyer</a>
-                    </div>
-                </div>
-            </Card>
             <Card>
                 <div slot="header">
                     <span>Sonntag, 25. Januar 2026</span><span>16.00 Uhr</span>
