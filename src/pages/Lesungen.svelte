@@ -1,5 +1,6 @@
 <script>
     import FlyerRegion from "@pdfs/Flyer-Region.pdf?url";
+    import FlyerGrenzach from "@pdfs/Flyer-Grenzach.pdf?url";
     import Card from "@components/Card.svelte";
     import TwoCols from "@components/TwoCols.svelte";
 
@@ -30,6 +31,7 @@
                             href="https://buchhandlung-merkel.de/event/lesung-mit-ines-siegfried/"
                             target="_blank">Lesung</a
                         >
+                        und <a href={FlyerGrenzach} target="_blank">Flyer</a>
                     </div>
                 </div>
             </Card>
