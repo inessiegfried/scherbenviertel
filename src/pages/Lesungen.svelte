@@ -59,6 +59,15 @@
 
             <Card>
                 <div slot="header">
+                    <span>Freitag, 13. März 2026</span><span>19.30 Uhr</span>
+                </div>
+                <div slot="body">
+                    In der Zunft zur fünften Jahreszeit in Bern
+                </div>
+            </Card>
+
+            <Card>
+                <div slot="header">
                     <span>Donnerstag, 16. April 2026</span><span>18.00 Uhr</span
                     >
                 </div>
