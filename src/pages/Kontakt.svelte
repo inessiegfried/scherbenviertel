@@ -20,6 +20,9 @@
             <li>
                 <a href="mailto:info@efefvarlag.ch"> info@efefverlag.ch </a>
             </li>
+            <li>
+                <a href="https://www.instagram.com/ines.siegfried">Instagram</a>
+            </li>
         </ul>
     {/snippet}
 </TwoCols>
