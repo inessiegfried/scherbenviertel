@@ -1,1 +1,50 @@
-<h1>Bild Galerie</h1>
+<script>
+    // Import all images from the specified directory
+    const imageImports = import.meta.glob("../../assets/img/*.jpg", {
+        eager: true,
+    });
+    console.log(imageImports);
+    const imagePaths = Object.keys(imageImports).map((path) =>
+        path.replace("../../assets/img/", ""),
+    );
+
+    // Optionally, get the actual image content if needed
+    const images = Object.entries(imageImports).map(([path, resolver]) => ({
+        name: path.split("/").pop(),
+        src: resolver.default,
+    }));
+</script>
+
+<div class="gallery">
+    {#each images as img}
+        <div class="img-wrapper">
+            <img src={img.src} alt={img.name} />
+        </div>
+    {/each}
+</div>
+
+<style>
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: scale 400ms ease;
+    }
+    .gallery {
+        margin-block: 2rem;
+        width: 100%;
+        justify-content: center;
+        display: grid;
+        grid-template-columns: repeat(3, 200px);
+        gap: 1rem;
+    }
+
+    .img-wrapper {
+        overflow: hidden;
+        border-radius: 1rem;
+    }
+
+    .img-wrapper:hover img {
+        scale: 1.2;
+    }
+</style>
