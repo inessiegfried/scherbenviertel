@@ -1,3 +1,4 @@
+import routify from "@roxi/routify/vite-plugin";
 import { defineConfig } from "vite";
 import { svelte } from "@sveltejs/vite-plugin-svelte";
 import path from "node:path";
@@ -9,7 +10,7 @@ function generateAlias(absolutePath) {
 
 // https://vite.dev/config/
 export default defineConfig({
-  plugins: [svelte()],
+  plugins: [svelte(), routify()],
   assetsInclude: ["/public/pdfs/*.pdf"],
   base: "/",
   build: {
