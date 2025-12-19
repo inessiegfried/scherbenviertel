@@ -17,34 +17,50 @@ export const routes = {
   "children": [
     {
       "meta": {},
-      "id": "_default_home",
-      "name": "home",
+      "id": "_default_galery",
+      "name": "galery",
       "module": false,
       "file": {
-        "path": "src/routes/home",
+        "path": "src/routes/galery",
         "dir": "src/routes",
-        "base": "home",
+        "base": "galery",
         "ext": "",
-        "name": "home"
+        "name": "galery"
       },
       "children": [
         {
           "meta": {
             "isDefault": true
           },
-          "id": "_default_home_index_svelte",
+          "id": "_default_galery_index_svelte",
           "name": "index",
           "file": {
-            "path": "src/routes/home/index.svelte",
-            "dir": "src/routes/home",
+            "path": "src/routes/galery/index.svelte",
+            "dir": "src/routes/galery",
             "base": "index.svelte",
             "ext": ".svelte",
             "name": "index"
           },
-          "asyncModule": () => import('../src/routes/home/index.svelte'),
+          "asyncModule": () => import('../src/routes/galery/index.svelte'),
           "children": []
         }
       ]
+    },
+    {
+      "meta": {
+        "isDefault": true
+      },
+      "id": "_default_index_svelte",
+      "name": "index",
+      "file": {
+        "path": "src/routes/index.svelte",
+        "dir": "src/routes",
+        "base": "index.svelte",
+        "ext": ".svelte",
+        "name": "index"
+      },
+      "asyncModule": () => import('../src/routes/index.svelte'),
+      "children": []
     },
     {
       "meta": {

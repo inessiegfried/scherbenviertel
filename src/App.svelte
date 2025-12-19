@@ -4,7 +4,6 @@
 
     import Header from "./components/Header.svelte";
     import SideMenu from "./components/SideMenu.svelte";
-    import MainContent from "./components/MainContent.svelte";
 
     let isMenuOpen = false;
 
@@ -23,7 +22,6 @@
     <Header {toggleMenu} />
     <SideMenu {isMenuOpen} {closeMenu} />
     <Router {router} />
-    <MainContent />
 </div>
 
 <style>
