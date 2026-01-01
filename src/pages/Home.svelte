@@ -1,7 +1,6 @@
 <script>
     import imgUrl from "@img/ines-gross.jpg?url";
     import TwoCols from "@components/TwoCols.svelte";
-    import { link } from "svelte-spa-router";
 </script>
 
 <TwoCols id="home" title="Ines Siegfried" breakout={true}>

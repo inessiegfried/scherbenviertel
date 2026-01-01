@@ -1,6 +1,4 @@
 <script>
-    import { location } from "svelte-spa-router";
-
     import Home from "./pages/Home.svelte";
     import Aktuell from "./pages/Aktuell.svelte";
     import Scherbenviertel from "./pages/Scherbenviertel.svelte";
@@ -10,7 +8,6 @@
     import Kontakt from "./pages/Kontakt.svelte";
 
     import Header from "./components/Header.svelte";
-    import Footer from "./components/Footer.svelte";
     import SideMenu from "./components/SideMenu.svelte";
     import MainContent from "./components/MainContent.svelte";
 
@@ -24,18 +21,9 @@
         "/kontakt": Kontakt,
     };
 
-    const pageNames = {
-        "/": "Home",
-        "/aktuell": "Aktuell",
-        "/scherbenviertel": "Scherbenviertel",
-        "/lesungen": "Lesungen",
-        "/gedanken": "Geschichten",
-        "/vita": "Vita",
-        "/kontakt": "Kontakt",
-    };
-
     // let isMenuOpen = window.innerWidth < (800 + 240) ? false : true;
     let isMenuOpen = false;
+    export let currentPageName = "Aktuell";
 
     function toggleMenu() {
         isMenuOpen = !isMenuOpen;
@@ -44,8 +32,6 @@
     function closeMenu() {
         isMenuOpen = false;
     }
-
-    $: currentPageName = pageNames[$location] || "Startseite";
 </script>
 
 <div id="layout">

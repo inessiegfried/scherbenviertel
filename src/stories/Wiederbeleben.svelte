@@ -1,7 +1,7 @@
 <script>
     import Detail from "@components/Details.svelte";
 
-    let { open = true, show = true } = $props();
+    let { open = false, show = false } = $props();
 </script>
 
 {#if show}
