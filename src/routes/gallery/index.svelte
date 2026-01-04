@@ -1,6 +1,6 @@
 <script>
     // Import all images from the specified directory
-    const imageImports = import.meta.glob("/gallery/*.jpg", {
+    const imageImports = import.meta.glob("/public/gallery/*.jpg", {
         eager: true,
     });
 
@@ -38,7 +38,7 @@
     .img-wrapper {
         overflow: hidden;
         border-radius: 1rem;
-        aspect-ratio: 3 / 4;
+        aspect-ratio: 1 / 1;
     }
 
     .img-wrapper:hover img {
