@@ -1,6 +1,6 @@
 <script>
     // Import all images from the specified directory
-    const imageImports = import.meta.glob("/public/gallery/*.jpg", {
+    const imageImports = import.meta.glob("/gallery/*.jpg", {
         eager: true,
     });
 
