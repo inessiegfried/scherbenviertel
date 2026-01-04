@@ -36,6 +36,7 @@
         <li><a href="/#gedanken" on:click={closeMenu}>Geschichten</a></li>
         <li><a href="/#vita" on:click={closeMenu}>Vita</a></li>
         <li><a href="/#kontakt" on:click={closeMenu}>Kontakt</a></li>
+        <li><a href="/gallery" on:click={closeMenu}>Bildgalerie</a></li>
     </ul>
 </aside>
 
