@@ -15,8 +15,8 @@
             <ImViereck open={false} show={true} />
             <!-- TODO: Ändere show und open um andere Geschichten zu zeigen. -->
             <Praepositionen open={false} show={true} />
-            <Gleis12 open={true} show={true} />
-            <Wiederbeleben open={false} show={false} />
+            <Gleis12 open={false} show={true} />
+            <Wiederbeleben open={true} show={true} />
         </div>
     {/snippet}
 </TwoCols>

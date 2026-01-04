@@ -6,6 +6,7 @@
     import SideMenu from "./components/SideMenu.svelte";
 
     let isMenuOpen = false;
+    export let currentPageName = "Aktuell";
 
     function toggleMenu() {
         isMenuOpen = !isMenuOpen;
