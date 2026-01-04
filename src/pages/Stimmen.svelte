@@ -1,0 +1,38 @@
+<script>
+    import Card from "@components/Card.svelte";
+    import TwoCols from "@components/TwoCols.svelte";
+    import data from "/public/data/stimmen.json";
+</script>
+
+<TwoCols id="stimmen" title="Stimmen" breakout={true}>
+    {#snippet first()}
+        <div>Stimmen zum Buch</div>
+    {/snippet}
+    {#snippet second()}
+        <div class="card-container">
+            {#each data as entry}
+                <Card>
+                    <div slot="header">
+                        {entry.author}
+                    </div>
+                    <div slot="body">
+                        {#each entry.msg as line}
+                            <p>
+                                {line}
+                            </p>
+                        {/each}
+                    </div>
+                </Card>
+            {/each}
+        </div>
+    {/snippet}
+</TwoCols>
+
+<style>
+    .card-container {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        margin-block: 3em;
+    }
+</style>

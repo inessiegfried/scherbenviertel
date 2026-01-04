@@ -23,6 +23,7 @@ export default defineConfig({
       "@pages": generateAlias("/src/pages/"),
       "@img": generateAlias("/img/"),
       "@pdfs": generateAlias("/pdfs/"),
+      "@data": generateAlias("/data/"),
     },
   },
 });
