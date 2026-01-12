@@ -1,6 +1,7 @@
 <script>
     import FlyerRegion from "@pdfs/Flyer-Region.pdf?url";
     import FlyerGrenzach from "@pdfs/Flyer-Grenzach.pdf?url";
+    import FlyerLokalLesen from "@pdfs/Flyer-lokal-lesen.pdf?url";
     import Card from "@components/Card.svelte";
     import TwoCols from "@components/TwoCols.svelte";
 
@@ -55,7 +56,10 @@
                     <span>Mittwoch, 4. Februar 2026</span><span>19.30 Uhr</span>
                 </div>
                 <div slot="body">
-                    In der Kantonsbibliothek Baselland, Liestal.
+                    <p>In der Kantonsbibliothek Baselland, Liestal.</p>
+                    <div>
+                        <a href={FlyerLokalLesen} target="_blank">Flyer</a>
+                    </div>
                 </div>
             </Card>
 
