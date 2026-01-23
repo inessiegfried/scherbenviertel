@@ -27,6 +27,18 @@
                     </div>
                 </Card>
             {/each}
+            <Card>
+                    <div slot="header">
+                        Beitrag aus dem Regionaljournal
+                    </div>
+                    <div slot="body">
+                      <section  class="msg-body">
+                        <a href="https://nanoo.tv/link/v/RLwNtkdu"
+              target="_blank">Beitrag auf Nanoo.tv</a>
+                      </section>
+                    </div>
+
+            </Card>
         </div>
     {/snippet}
 </TwoCols>

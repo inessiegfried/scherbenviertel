@@ -2,6 +2,7 @@
     import FlyerRegion from "@pdfs/Flyer-Region.pdf?url";
     import FlyerGrenzach from "@pdfs/Flyer-Grenzach.pdf?url";
     import FlyerLokalLesen from "@pdfs/Flyer-lokal-lesen.pdf?url";
+    import FlyerKeller from "@pdfs/Flyer-keller.pdf?url";
     import Card from "@components/Card.svelte";
     import TwoCols from "@components/TwoCols.svelte";
 
@@ -68,7 +69,10 @@
                     <span>Freitag, 13. März 2026</span><span>19.30 Uhr</span>
                 </div>
                 <div slot="body">
-                    In der Zunft zur fünften Jahreszeit in Bern
+                    <p>In der Zunft zur fünften Jahreszeit in Bern.</p>
+                    <div>
+                        <a href={FlyerKeller} target="_blank">Flyer</a>
+                    </div>
                 </div>
             </Card>
 
