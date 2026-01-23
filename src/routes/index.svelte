@@ -39,8 +39,8 @@
     <div class="full-width content-grid"><Aktuell /></div>
     <div><Scherbenviertel /></div>
     <div class="full-width content-grid"><Lesungen /></div>
-    <div class="breakout"><Gedanken /></div>
-    <div class="full-width content-grid"><Stimmen /></div>
+    <div class="breakout"><Stimmen /></div>
+    <div class="full-width content-grid"><Gedanken /></div>
     <div><Vita /></div>
     <div class="full-width content-grid"><Kontakt /></div>
 </main>

@@ -16,11 +16,14 @@
                         {entry.author}
                     </div>
                     <div slot="body">
+                      <section  class="msg-body">
                         {#each entry.msg as line}
                             <p>
                                 {line}
                             </p>
                         {/each}
+                      </section>
+                      <p>{entry.greetings}</p>
                     </div>
                 </Card>
             {/each}
@@ -34,5 +37,9 @@
         flex-direction: column;
         gap: 2rem;
         margin-block: 3em;
+    }
+
+    .msg-body > p {
+      margin-block: 0;
     }
 </style>
