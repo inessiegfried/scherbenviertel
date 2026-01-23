@@ -6,7 +6,7 @@
     import imgUrl from "@img/Rezension.jpg?url";
 </script>
 
-<TwoCols id="stimmen" title="Stimmen zum Scherbenviertel" breakout={true}>
+<TwoCols id="stimmen" title="Stimmen zum Buch „Scherbenviertel“" breakout={true}>
     {#snippet first()}
             <img src={imgUrl} alt="Bild einer Rezension" />
     {/snippet}
@@ -29,18 +29,22 @@
                     </div>
                 </Card>
             {/each}
-            <Card>
-                    <div slot="header">
-                        Beitrag aus dem Regionaljournal
-                    </div>
-                    <div slot="body">
-                      <section  class="msg-body">
-                        <a href="https://nanoo.tv/link/v/RLwNtkdu"
-              target="_blank">Beitrag auf Nanoo.tv</a>
-                      </section>
-                    </div>
+      <Card>
+        <div slot="header">
+          Beitrag im Regionaljournal
+        </div>
+        <div slot="body">
+          <section  class="msg-body">
+            Wo Basel einst ein Scherbenviertel war. Autorin Ines Siegfried erzählt eine Familiengeschichte aus dem Kleinbasel. Ein 
+            <a href="https://nanoo.tv/link/v/RLwNtkdu"
+              target="_blank">
+              Beitrag von Patrick Künzle
+            </a>
+            im Regionaljournal Basel Baselland vom 19.1.26.
+          </section>
+        </div>
 
-            </Card>
+      </Card>
         </div>
     {/snippet}
 </TwoCols>
