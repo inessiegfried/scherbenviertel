@@ -27,11 +27,15 @@ jobs:
         run: npm run build
       
       - name: Deploy via FTP
-        uses: airvzxf/ftp-deployment-action@latest
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.6
         with:
           server: ${{ secrets.FTP_SERVER }}
-          user: ${{ secrets.FTP_USERNAME }}
+          username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          local_dir: "./dist"
-          remote_dir: ${{ secrets.FTP_SERVER_PATH }}
-          delete: "false"
+          server-dir: ${{ secrets.FTP_SERVER_PATH }}
+          local-dir: ./dist/client/
+          dangerous-clean-slate: false
+          exclude: |
+            **/.git*
+            **/.git*/**
+            **/node_modules/**
