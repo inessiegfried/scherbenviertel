@@ -1,27 +1,10 @@
 <script>
-    import Home from "./pages/Home.svelte";
-    import Aktuell from "./pages/Aktuell.svelte";
-    import Scherbenviertel from "./pages/Scherbenviertel.svelte";
-    import Lesungen from "./pages/Lesungen.svelte";
-    import Gedanken from "./pages/Gedanken.svelte";
-    import Vita from "./pages/Vita.svelte";
-    import Kontakt from "./pages/Kontakt.svelte";
+    import { Router, createRouter } from "@roxi/routify";
+    import routes from "../.routify/routes.default.js";
 
     import Header from "./components/Header.svelte";
     import SideMenu from "./components/SideMenu.svelte";
-    import MainContent from "./components/MainContent.svelte";
 
-    const routes = {
-        "/": Home,
-        "/aktuell": Aktuell,
-        "/scherbenviertel": Scherbenviertel,
-        "/lesungen": Lesungen,
-        "/gedanken": Gedanken,
-        "/vita": Vita,
-        "/kontakt": Kontakt,
-    };
-
-    // let isMenuOpen = window.innerWidth < (800 + 240) ? false : true;
     let isMenuOpen = false;
     export let currentPageName = "Aktuell";
 
@@ -32,13 +15,14 @@
     function closeMenu() {
         isMenuOpen = false;
     }
+
+    export const router = createRouter({ routes });
 </script>
 
 <div id="layout">
-    <Header {currentPageName} {toggleMenu} />
+    <Header {toggleMenu} />
     <SideMenu {isMenuOpen} {closeMenu} />
-    <MainContent {routes} />
-    <!-- <Footer /> -->
+    <Router {router} />
 </div>
 
 <style>

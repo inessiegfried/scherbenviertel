@@ -6,6 +6,7 @@
     import Gedanken from "@pages/Gedanken.svelte";
     import Vita from "@pages/Vita.svelte";
     import Kontakt from "@pages/Kontakt.svelte";
+    import Stimmen from "@pages/Stimmen.svelte";
     import { onMount } from "svelte";
     import { headerState } from "../sharedStates/headerState.svelte";
 
@@ -38,9 +39,10 @@
     <div class="full-width content-grid"><Aktuell /></div>
     <div><Scherbenviertel /></div>
     <div class="full-width content-grid"><Lesungen /></div>
-    <div class="breakout"><Gedanken /></div>
-    <div class="full-width content-grid"><Vita /></div>
-    <div><Kontakt /></div>
+    <div class="breakout"><Stimmen /></div>
+    <div class="full-width content-grid"><Gedanken /></div>
+    <div><Vita /></div>
+    <div class="full-width content-grid"><Kontakt /></div>
 </main>
 
 <style>

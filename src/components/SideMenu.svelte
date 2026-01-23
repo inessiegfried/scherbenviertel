@@ -27,15 +27,16 @@
 
 <aside id="side-menu" class:open={isMenuOpen} bind:this={menu}>
     <ul id="menu">
-        <li><a href="#home" on:click={closeMenu}>Startseite</a></li>
-        <li><a href="#aktuell" on:click={closeMenu}>Aktuell</a></li>
+        <li><a href="/#home" on:click={closeMenu}>Startseite</a></li>
+        <li><a href="/#aktuell" on:click={closeMenu}>Aktuell</a></li>
         <li>
-            <a href="#scherbenviertel" on:click={closeMenu}>Scherbenviertel</a>
+            <a href="/#scherbenviertel" on:click={closeMenu}>Scherbenviertel</a>
         </li>
-        <li><a href="#lesungen" on:click={closeMenu}>Lesungen</a></li>
-        <li><a href="#gedanken" on:click={closeMenu}>Geschichten</a></li>
-        <li><a href="#vita" on:click={closeMenu}>Vita</a></li>
-        <li><a href="#kontakt" on:click={closeMenu}>Kontakt</a></li>
+        <li><a href="/#lesungen" on:click={closeMenu}>Lesungen</a></li>
+        <li><a href="/#stimmen" on:click={closeMenu}>Stimmen</a></li>
+        <li><a href="/#gedanken" on:click={closeMenu}>Geschichten</a></li>
+        <li><a href="/#vita" on:click={closeMenu}>Vita</a></li>
+        <li><a href="/#kontakt" on:click={closeMenu}>Kontakt</a></li>
     </ul>
 </aside>
 
