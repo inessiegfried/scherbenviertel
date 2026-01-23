@@ -4,11 +4,14 @@
     import Praepositionen from "../stories/Praepositionen.svelte";
     import Gleis12 from "../stories/Gleis12.svelte";
     import Wiederbeleben from "../stories/Wiederbeleben.svelte";
+
+
+    import imgUrl from "@img/Aussicht.jpg?url";
 </script>
 
 <TwoCols id="gedanken" title="Geschichten">
     {#snippet first()}
-        <div class="fancy-bottom">Jeden Monat eine neue Geschichte.</div>
+            <img src={imgUrl} alt="Bild mit Aussicht" />
     {/snippet}
     {#snippet second()}
         <div class="story-container">

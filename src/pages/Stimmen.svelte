@@ -2,11 +2,13 @@
     import Card from "@components/Card.svelte";
     import TwoCols from "@components/TwoCols.svelte";
     import data from "/public/data/stimmen.json";
+
+    import imgUrl from "@img/Rezension.jpg?url";
 </script>
 
-<TwoCols id="stimmen" title="Stimmen" breakout={true}>
+<TwoCols id="stimmen" title="Stimmen zum Scherbenviertel" breakout={true}>
     {#snippet first()}
-        <div>Stimmen zum Buch</div>
+            <img src={imgUrl} alt="Bild einer Rezension" />
     {/snippet}
     {#snippet second()}
         <div class="card-container">
