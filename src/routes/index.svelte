@@ -15,22 +15,33 @@
     }
 
     onMount(() => {
-        const mainContainer = document.querySelectorAll(".two-cols");
-        const observer = new IntersectionObserver(
-            (entries) => {
-                entries.forEach((entry) => {
-                    if (entry.isIntersecting) {
-                        changeTitle(entry.target.getAttribute("data-title"));
-                    }
-                });
-            },
-            { rootMargin: "-200px 0px -200px 0px" },
-        );
-        mainContainer.forEach((entry) => observer.observe(entry));
-
-        return () => {
-            mainContainer.forEach((entry) => observer.unobserve(entry));
-        };
+        const sections = document.querySelectorAll(".two-cols");
+        const scrollContainer = document.querySelector("#main-container");
+        
+        // Berechne die rootMargin basierend auf der Container-Höhe
+        const containerHeight = scrollContainer.clientHeight;
+        const bottomMargin = Math.floor(containerHeight * 0.8); // 80% vom unteren Bereich abziehen
+        
+        // Beobachte jede Section separat
+        sections.forEach((section) => {
+            const observer = new IntersectionObserver(
+                (entries) => {
+                    entries.forEach((entry) => {
+                        // Wenn der obere Teil der Section im oberen Bereich sichtbar ist, ändere den Titel
+                        if (entry.isIntersecting) {
+                            changeTitle(entry.target.getAttribute("data-title"));
+                        }
+                    });
+                },
+                {
+                    root: scrollContainer,
+                    rootMargin: `-50px 0px -${bottomMargin}px 0px`,
+                    threshold: 0
+                }
+            );
+            
+            observer.observe(section);
+        });
     });
 </script>
 
