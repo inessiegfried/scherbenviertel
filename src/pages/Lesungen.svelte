@@ -1,6 +1,4 @@
 <script>
-    import FlyerRegion from "@pdfs/Flyer-Region.pdf?url";
-    import FlyerGrenzach from "@pdfs/Flyer-Grenzach.pdf?url";
     import FlyerLokalLesen from "@pdfs/Flyer-lokal-lesen.pdf?url";
     import FlyerKeller from "@pdfs/Flyer-keller.pdf?url";
     import Card from "@components/Card.svelte";
@@ -19,40 +17,6 @@
     {/snippet}
     {#snippet second()}
         <div class="card-container">
-            <Card>
-                <div slot="header">
-                    <span>Sonntag, 25. Januar 2026</span><span>16.00 Uhr</span>
-                </div>
-                <div slot="body">
-                    <p>
-                        Mit musikalischer Kommentierung durch das <span
-                            class="italic">trio someāl</span
-                        > in der Buchhandlung Merkel in Grenzach.
-                    </p>
-                    <div>
-                        <a
-                            href="https://buchhandlung-merkel.de/event/lesung-mit-ines-siegfried/"
-                            target="_blank">Lesung</a
-                        >
-                        und <a href={FlyerGrenzach} target="_blank">Flyer</a>
-                    </div>
-                </div>
-            </Card>
-
-            <Card>
-                <div slot="header">
-                    <span>Donnerstag, 29. Januar 2026</span><span
-                        >19.30 Uhr</span
-                    >
-                </div>
-                <div slot="body">
-                    <p>In der Rössli Buchhandlung in Riehen.</p>
-                    <div>
-                        <a href={FlyerRegion} target="_blank">Flyer</a>
-                    </div>
-                </div>
-            </Card>
-
             <Card>
                 <div slot="header">
                     <span>Mittwoch, 4. Februar 2026</span><span>19.30 Uhr</span>
