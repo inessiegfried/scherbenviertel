@@ -4,6 +4,7 @@
     import Praepositionen from "../stories/Praepositionen.svelte";
     import Gleis12 from "../stories/Gleis12.svelte";
     import Wiederbeleben from "../stories/Wiederbeleben.svelte";
+    import DerUnfall from "../stories/DerUnfall.svelte";
 
 
     import imgUrl from "@img/Aussicht.jpg?url";
@@ -19,7 +20,8 @@
             <!-- TODO: Ändere show und open um andere Geschichten zu zeigen. -->
             <Praepositionen open={false} show={true} />
             <Gleis12 open={false} show={true} />
-            <Wiederbeleben open={true} show={true} />
+            <Wiederbeleben open={false} show={true} />
+            <DerUnfall open={true} show={true} />
         </div>
     {/snippet}
 </TwoCols>
