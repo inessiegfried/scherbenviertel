@@ -15,6 +15,7 @@
     .two-cols {
         display: flex;
         scroll-snap-align: start;
+        scroll-margin-top: 20px;
         flex-direction: row;
         justify-content: center;
         align-items: center;

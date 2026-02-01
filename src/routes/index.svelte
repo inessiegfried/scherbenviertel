@@ -63,7 +63,8 @@
         padding-top: var(--header-height);
         padding: 0;
         align-items: center;
-        scroll-snap-type: y mandatory;
+        scroll-snap-type: y proximity;
+        scroll-padding-top: calc(var(--header-height) + 20px);
     }
 
     .content-grid {
