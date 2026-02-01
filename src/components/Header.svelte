@@ -5,13 +5,24 @@
 </script>
 
 <nav>
-    <h1>{headerState.title}</h1>
+    <h1>
+        {#if headerState.titleMain && headerState.titleSub}
+            <span class="title-main">{headerState.titleMain}</span>
+            <span class="title-sub">{headerState.titleSub}</span>
+        {:else}
+            {headerState.title}
+        {/if}
+    </h1>
 </nav>
 <button id="menu-button" on:click={toggleMenu}></button>
 
 <style>
     nav {
-        height: var(--header-height);
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        min-height: var(--header-height);
         background-color: var(--base-color);
         display: flex;
         align-items: center;
@@ -19,6 +30,42 @@
         font-weight: bold;
         font-size: 1.2em;
         z-index: 1002;
+        padding: 0.5rem;
+    }
+
+    h1 {
+        margin: 0;
+        padding: 0;
+        text-align: center;
+    }
+
+    .title-main,
+    .title-sub {
+        display: inline;
+    }
+
+    @media (max-width: 600px) {
+        nav {
+            height: var(--header-height);
+            padding: 0.5rem;
+        }
+
+        h1 {
+            display: flex;
+            flex-direction: column;
+            gap: 0.2rem;
+            line-height: 1.2;
+        }
+
+        .title-main {
+            font-size: 1em;
+        }
+
+        .title-sub {
+            font-size: 0.65em;
+            opacity: 0.9;
+            font-weight: normal;
+        }
     }
 
     #menu-button {

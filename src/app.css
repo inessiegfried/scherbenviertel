@@ -141,6 +141,7 @@ li::before {
 @media (max-width: 600px) {
     :root {
         --font-size: 1rem;
+        --header-height: 75px;
     }
 
     .hide-sm {

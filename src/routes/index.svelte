@@ -10,8 +10,10 @@
     import { onMount } from "svelte";
     import { headerState } from "../sharedStates/headerState.svelte";
 
-    function changeTitle(newTitle) {
+    function changeTitle(newTitle, titleMain = null, titleSub = null) {
         headerState.title = newTitle;
+        headerState.titleMain = titleMain;
+        headerState.titleSub = titleSub;
     }
 
     onMount(() => {
@@ -29,7 +31,10 @@
                     entries.forEach((entry) => {
                         // Wenn der obere Teil der Section im oberen Bereich sichtbar ist, ändere den Titel
                         if (entry.isIntersecting) {
-                            changeTitle(entry.target.getAttribute("data-title"));
+                            const title = entry.target.getAttribute("data-title");
+                            const titleMain = entry.target.getAttribute("data-title-main");
+                            const titleSub = entry.target.getAttribute("data-title-sub");
+                            changeTitle(title, titleMain, titleSub);
                         }
                     });
                 },
@@ -59,12 +64,10 @@
 <style>
     .main-container {
         overflow: overlay;
-        height: var(--body-height);
-        padding-top: var(--header-height);
-        padding: 0;
+        height: 100dvh;
         align-items: center;
         scroll-snap-type: y proximity;
-        scroll-padding-top: calc(var(--header-height) + 20px);
+        scroll-padding-top: var(--header-height);
     }
 
     .content-grid {

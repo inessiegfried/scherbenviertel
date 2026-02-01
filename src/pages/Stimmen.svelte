@@ -6,7 +6,13 @@
     import imgUrl from "@img/Rezension.jpg?url";
 </script>
 
-<TwoCols id="stimmen" title="Stimmen zum Buch „Scherbenviertel“" breakout={true}>
+<TwoCols 
+    id="stimmen" 
+    title={'Stimmen zum Buch „Scherbenviertel"'} 
+    titleMain="Stimmen"
+    titleSub={'zum Buch „Scherbenviertel"'}
+    breakout={true}
+>
     {#snippet first()}
             <img src={imgUrl} alt="Bild einer Rezension" />
     {/snippet}
