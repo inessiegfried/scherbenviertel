@@ -68,7 +68,7 @@
 
         .second-col {
             flex: 1;
-            min-height: 100dvh;
+            min-height: calc(100dvh - var(--header-height));
             display: flex;
             flex-direction: column;
             justify-content: center;

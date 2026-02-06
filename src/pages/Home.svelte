@@ -18,10 +18,24 @@
 </TwoCols>
 
 <style>
+    :global(#home.two-cols) {
+        height: calc(100dvh - var(--header-height)) !important;
+        min-height: calc(100dvh - var(--header-height)) !important;
+        max-height: calc(100dvh - var(--header-height)) !important;
+        align-items: center !important;
+    }
+    
+    :global(#home.two-cols .first-col) {
+        position: static !important;
+        margin-block: 0 !important;
+        align-self: center !important;
+    }
+
     .img-wrapper {
         display: flex;
         flex-direction: column;
         align-items: center;
+        justify-content: center;
     }
 
     .img-wrapper > img {

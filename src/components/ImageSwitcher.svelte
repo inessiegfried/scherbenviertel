@@ -56,11 +56,12 @@
     .image-switcher-container {
         container-name: image-switcher;
         container-type: inline-size;
+        width: 100%;
     }
 
     .image-switcher {
-        width: 100%;
-        max-width: 300px;
+        width: 300px;
+        max-width: 100%;
         overflow: hidden;
         margin: 0 auto;
     }
@@ -70,13 +71,17 @@
         animation-name: swipe;
         animation-duration: var(--total-duration);
         animation-iteration-count: infinite;
-        animation-timing-function: linear;
+        animation-timing-function: ease-in-out;
     }
     
     .image-container > img {
-        flex: 0 0 100%;
-        width: 100%;
+        flex: 0 0 300px;
+        width: 300px;
+        max-width: 100%;
+        min-height: 300px;
+        height: auto;
         object-fit: cover;
+        display: block;
     }
 
     /* Responsive Image Width */
