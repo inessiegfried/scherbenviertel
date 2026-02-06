@@ -2,18 +2,26 @@
     let { first, second, id, title, titleMain = null, titleSub = null, breakout = false } = $props();
 </script>
 
-<div
-    {id}
-    class={breakout ? "two-cols breakout" : "two-cols"}
-    data-title={title}
-    data-title-main={titleMain}
-    data-title-sub={titleSub}
->
-    <div class="first-col">{@render first?.()}</div>
-    <div class="second-col">{@render second?.()}</div>
+<div class="two-cols-container">
+    <div
+        {id}
+        class={breakout ? "two-cols breakout" : "two-cols"}
+        data-title={title}
+        data-title-main={titleMain}
+        data-title-sub={titleSub}
+    >
+        <div class="first-col">{@render first?.()}</div>
+        <div class="second-col">{@render second?.()}</div>
+    </div>
 </div>
 
 <style>
+    .two-cols-container {
+        container-name: two-cols;
+        container-type: inline-size;
+        width: 100%;
+    }
+
     .two-cols {
         display: flex;
         scroll-snap-align: start;
@@ -41,8 +49,8 @@
         width: 100%;
     }
 
-    /* Desktop Layout */
-    @media (min-width: 601px) {
+    /* Desktop Layout - Container Query */
+    @container two-cols (min-width: 641px) {
         .two-cols {
             flex-direction: row;
             gap: 5%;
@@ -52,7 +60,7 @@
 
         .first-col {
             position: sticky;
-            top: var(--header-height);
+            top: 2rem;
             width: min(300px, 100%);
             flex-shrink: 0;
             align-self: center;
@@ -67,8 +75,8 @@
         }
     }
 
-    /* Mobile Layout */
-    @media (max-width: 600px) {
+    /* Mobile Layout - Container Query */
+    @container two-cols (max-width: 640px) {
         .two-cols {
             flex-direction: column;
             padding: 2rem 0;

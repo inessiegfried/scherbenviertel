@@ -3,8 +3,7 @@
 
     let menu;
 
-    export let isMenuOpen;
-    export let closeMenu;
+    let { isMenuOpen, closeMenu } = $props();
 
     onMount(() => {
         function handleClickOutsideEvent(e) {
@@ -12,7 +11,8 @@
             if (
                 menu &&
                 !menu.contains(e.target) &&
-                !menuButton.contains(e.target)
+                !menuButton.contains(e.target) &&
+                isMenuOpen
             ) {
                 closeMenu();
             }
@@ -25,7 +25,7 @@
     });
 </script>
 
-<aside id="side-menu" class:open={isMenuOpen} bind:this={menu}>
+<aside id="side-menu" bind:this={menu}>
     <ul id="menu">
         <li><a href="/#home" on:click={closeMenu}>Startseite</a></li>
         <li><a href="/#aktuell" on:click={closeMenu}>Aktuell</a></li>
@@ -42,28 +42,17 @@
 
 <style>
     aside {
-        position: fixed;
-        display: block;
-        top: 0;
-        right: 0;
-        height: 100vh;
         background-color: var(--base-color-darker);
-        z-index: 1000;
-        transition: transform 0.3s ease;
-        transform: translateX(100%);
-        padding: 1rem;
-        padding-right: 2em;
-    }
-
-    aside.open {
-        display: block;
-        transform: translateX(0);
+        padding: 1rem 2rem 1rem 1rem;
+        container-name: sidemenu;
+        container-type: inline-size;
+        height: 100%;
     }
 
     #menu {
         display: flex;
         flex-direction: column;
-        align-items: left;
+        align-items: flex-start;
         justify-content: center;
         height: 100%;
         gap: 0.5rem;

@@ -4,33 +4,37 @@
     let { toggleMenu } = $props();
 </script>
 
-<nav>
-    <h1>
-        {#if headerState.titleMain && headerState.titleSub}
-            <span class="title-main">{headerState.titleMain}</span>
-            <span class="title-sub">{headerState.titleSub}</span>
-        {:else}
-            {headerState.title}
-        {/if}
-    </h1>
-</nav>
-<button id="menu-button" on:click={toggleMenu}></button>
+<header>
+    <nav>
+        <h1>
+            {#if headerState.titleMain && headerState.titleSub}
+                <span class="title-main">{headerState.titleMain}</span>
+                <span class="title-sub">{headerState.titleSub}</span>
+            {:else}
+                {headerState.title}
+            {/if}
+        </h1>
+    </nav>
+    <button id="menu-button" on:click={toggleMenu}></button>
+</header>
 
 <style>
+    header {
+        container-name: header;
+        container-type: inline-size;
+        position: relative;
+        grid-area: header;
+    }
+
     nav {
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        min-height: var(--header-height);
         background-color: var(--base-color);
         display: flex;
         align-items: center;
         justify-content: center;
         font-weight: bold;
         font-size: 1.2em;
-        z-index: 1002;
         padding: 0.5rem;
+        min-height: 59px;
     }
 
     h1 {
@@ -44,9 +48,9 @@
         display: inline;
     }
 
-    @media (max-width: 600px) {
+    /* Container Query statt Media Query */
+    @container header (max-width: 640px) {
         nav {
-            height: var(--header-height);
             padding: 0.5rem;
         }
 
@@ -68,9 +72,10 @@
         }
     }
 
+    /* Menu Button */
     #menu-button {
         display: block;
-        position: fixed;
+        position: absolute;
         width: var(--bookmark-width);
         height: var(--bookmark-height);
         background-color: var(--base-color);
@@ -78,7 +83,7 @@
         right: var(--bookmark-right);
         border: none;
         cursor: pointer;
-        z-index: 1001;
+        z-index: 10;
         animation: wiggle 5s linear 10s infinite;
     }
 

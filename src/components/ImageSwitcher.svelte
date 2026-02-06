@@ -40,20 +40,29 @@
     }
 </script>
 
-<div class="image-switcher">
-    <div class="image-container" style="--total-duration: {totalDuration}ms">
-        {#each extendedImages as imgSrc}
-            <img src={imgSrc} alt="Bild in einem Bilderkarousel" />
-        {/each}
+<div class="image-switcher-container">
+    <div class="image-switcher">
+        <div class="image-container" style="--total-duration: {totalDuration}ms">
+            {#each extendedImages as imgSrc}
+                <img src={imgSrc} alt="Bild in einem Bilderkarousel" />
+            {/each}
+        </div>
     </div>
 </div>
 
 {@html `<style>${generateKeyframes()}</style>`}
 
 <style>
+    .image-switcher-container {
+        container-name: image-switcher;
+        container-type: inline-size;
+    }
+
     .image-switcher {
-        width: 300px;
+        width: 100%;
+        max-width: 300px;
         overflow: hidden;
+        margin: 0 auto;
     }
     
     .image-container {
@@ -65,6 +74,15 @@
     }
     
     .image-container > img {
-        flex: 0 0 300px;
+        flex: 0 0 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    /* Responsive Image Width */
+    @container image-switcher (max-width: 640px) {
+        .image-switcher {
+            max-width: 100%;
+        }
     }
 </style>

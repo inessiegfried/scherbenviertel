@@ -1,5 +1,5 @@
 export const headerState = $state({
   title: "Home",
-  titleMain: null,
-  titleSub: null,
+  titleMain: /** @type {string | null} */ (null),
+  titleSub: /** @type {string | null} */ (null),
 });

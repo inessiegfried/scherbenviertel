@@ -5,9 +5,17 @@
 :root {
     interpolate-size: allow-keywords;
 
+    /* Container Query Breakpoints */
+    --breakpoint-sm: 640px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 1024px;
+    --breakpoint-xl: 1280px;
+
+    /* Layout Variables */
+    --nav-width: 250px;
     --header-height: 59px;
     --footer-height: 0px; /*45px;*/
-    --body-height: calc(100dvh - var(--header-height) - var(--footer-height));
+    --body-height: 100dvh;
     --bookmark-height: calc(var(--header-height) + 40px);
     --bookmark-width: 60px;
     --bookmark-right: 5%;
@@ -138,10 +146,10 @@ li::before {
     border-bottom: 6px solid transparent;
 }
 
-@media (max-width: 600px) {
+/* Globale Media Queries nur für Font-Size und globale Styles */
+@media (max-width: 640px) {
     :root {
         --font-size: 1rem;
-        --header-height: 75px;
     }
 
     .hide-sm {

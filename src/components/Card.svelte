@@ -1,9 +1,16 @@
-<div class="card">
-  <slot class="card-header" name="header"></slot>
-  <slot class="card-body" name="body"></slot>
+<div class="card-container">
+    <div class="card">
+        <slot class="card-header" name="header"></slot>
+        <slot class="card-body" name="body"></slot>
+    </div>
 </div>
 
 <style>
+    .card-container {
+        container-name: card;
+        container-type: inline-size;
+    }
+
     .card {
         padding: 0;
         box-shadow: 6px 3px 12px var(--teal);
@@ -26,5 +33,14 @@
 
     :global([slot="body"]) {
         padding: 1em;
+    }
+
+    /* Responsive Card Header für kleine Container */
+    @container card (max-width: 640px) {
+        :global([slot="header"]) {
+            flex-direction: column;
+            gap: 0.5rem;
+            align-items: flex-start;
+        }
     }
 </style>
