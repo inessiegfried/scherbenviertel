@@ -54,8 +54,7 @@
         .two-cols {
             flex-direction: row;
             gap: 5%;
-            align-items: center;
-            min-height: 100dvh;
+            align-items: stretch;
         }
 
         .first-col {
@@ -64,7 +63,7 @@
             width: min(300px, 100%);
             flex-shrink: 0;
             align-self: flex-start;
-        margin-block:calc(50vh - 150px);
+            margin-block: calc(50vh - 150px);
         }
 
         .second-col {
