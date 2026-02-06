@@ -59,11 +59,11 @@
 
         .first-col {
             position: sticky;
-            top: max(2rem, calc(50vh - 150px));
+            top: max(2rem, calc(50vh - 250px));
             width: min(300px, 100%);
             flex-shrink: 0;
             align-self: flex-start;
-            margin-block: calc(50vh - 150px);
+            margin-block: calc(50vh - 250px);
         }
 
         .second-col {
