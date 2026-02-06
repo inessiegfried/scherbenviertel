@@ -60,10 +60,11 @@
 
         .first-col {
             position: sticky;
-            top: 2rem;
+            top: max(2rem, calc(50vh - 150px));
             width: min(300px, 100%);
             flex-shrink: 0;
-            align-self: center;
+            align-self: flex-start;
+        margin-block:calc(50vh - 150px);
         }
 
         .second-col {
