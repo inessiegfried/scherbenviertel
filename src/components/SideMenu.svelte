@@ -47,6 +47,8 @@
         container-name: sidemenu;
         container-type: inline-size;
         height: 100%;
+        z-index: 100;
+        position: relative;
     }
 
     #menu {

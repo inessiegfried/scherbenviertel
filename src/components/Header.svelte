@@ -24,6 +24,7 @@
         container-type: inline-size;
         position: relative;
         grid-area: header;
+        z-index: 102;
     }
 
     nav {
@@ -35,6 +36,8 @@
         font-size: 1.2em;
         padding: 0.5rem;
         min-height: 59px;
+        position: relative;
+        z-index: 2;
     }
 
     h1 {
@@ -83,7 +86,7 @@
         right: var(--bookmark-right);
         border: none;
         cursor: pointer;
-        z-index: 10;
+        z-index: 1;
         animation: wiggle 5s linear 10s infinite;
     }
 
@@ -98,6 +101,14 @@
         border-left: 30px solid var(--base-color);
         border-right: 30px solid var(--base-color);
         border-bottom: 20px solid transparent;
+    }
+
+    /* Desktop: Menu-Button am unteren Rand des Headers */
+    @container header (min-width: 641px) {
+        #menu-button {
+            top: auto;
+            bottom: -30px;
+        }
     }
 
     @keyframes wiggle {
