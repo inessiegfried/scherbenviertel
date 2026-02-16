@@ -65,14 +65,14 @@
 </script>
 
 <main id="main-container" class="main-container content-grid">
-    <div><Home /></div>
-    <div class="full-width content-grid"><Aktuell /></div>
-    <div><Scherbenviertel /></div>
-    <div class="full-width content-grid"><Lesungen /></div>
-    <div class="breakout"><Stimmen /></div>
-    <div class="full-width content-grid"><Gedanken /></div>
-    <div><Vita /></div>
-    <div class="full-width content-grid"><Kontakt /></div>
+    <section><Home /></section>
+    <section><Aktuell /></section>
+    <section><Scherbenviertel /></section>
+    <section><Lesungen /></section>
+    <section><Stimmen /></section>
+    <section><Gedanken /></section>
+    <section><Vita /></section>
+    <section><Kontakt /></section>
 </main>
 
 <style>
@@ -83,21 +83,7 @@
         scroll-padding-top: 0;
     }
 
-    .content-grid {
-        display: grid;
-        grid-template-columns: [full-width-start] 100px [breakout-start] 100px [content-start] 1fr [content-end] 100px [breakout-end] 100px [full-width-end];
-    }
-
-    :global(.content-grid > *) {
-        grid-column: content;
-    }
-
-    :global(.breakout) {
-        grid-column: breakout;
-    }
-
-    .full-width {
-        grid-column: full-width;
+    section:nth-child(odd) {
         background: radial-gradient(
             circle at center,
             var(--base-color),
@@ -105,10 +91,6 @@
         );
     }
 
-    /* Container Query statt Media Query */
-    @container main (max-width: 1024px) {
-        .content-grid {
-            grid-template-columns: [full-width-start] 10px [breakout-start] 50px [content-start] 1fr [content-end] 50px [breakout-end] 10px [full-width-end];
-        }
-    }
+
+
 </style>

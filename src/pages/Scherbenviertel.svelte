@@ -6,7 +6,7 @@
 <TwoCols id="scherbenviertel" title="Scherbenviertel">
     {#snippet first()}
         <img src={imgUrl} alt="Buch Cover" />
-        <p class="fs-14 text-center text-yellow text-mono">
+        <p class="text-sm text-center text-yellow text-mono">
             ISBN 978-3-906199-33-7
         </p>
     {/snippet}
@@ -25,8 +25,4 @@
     {/snippet}
 </TwoCols>
 
-<style>
-    .fs-14 {
-        font-size: 14pt;
-    }
-</style>
+

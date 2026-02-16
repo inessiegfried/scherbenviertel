@@ -34,8 +34,8 @@
         justify-content: center;
         font-weight: bold;
         font-size: 1.2em;
-        padding: 0.5rem;
-        min-height: 59px;
+        padding: var(--space-2xs);
+        min-height: var(--header-height);
         position: relative;
         z-index: 2;
     }
@@ -54,13 +54,13 @@
     /* Container Query statt Media Query */
     @container header (max-width: 640px) {
         nav {
-            padding: 0.5rem;
+            padding: var(--space-2xs);
         }
 
         h1 {
             display: flex;
             flex-direction: column;
-            gap: 0.2rem;
+            gap: var(--space-3xs);
             line-height: 1.2;
         }
 

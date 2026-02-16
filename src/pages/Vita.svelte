@@ -1,5 +1,5 @@
 <script>
-    import imgUrl from "/img/ines2.jpg";
+    import imgUrl from "@img/ines2.jpg?url";
     import TwoCols from "@components/TwoCols.svelte";
 </script>
 
@@ -29,10 +29,10 @@
 
 <style>
     li {
-        margin-bottom: 1em;
+        margin-bottom: var(--space-sm);
     }
     ul {
         padding-left: 0;
-        margin-block: 2em;
+        margin-block: var(--space-lg);
     }
 </style>

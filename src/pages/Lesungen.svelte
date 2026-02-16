@@ -1,6 +1,7 @@
 <script>
     import FlyerKeller from "@pdfs/Flyer-keller.pdf?url";
     import Card from "@components/Card.svelte";
+    import CardContainer from "@components/CardContainer.svelte";
     import TwoCols from "@components/TwoCols.svelte";
 
     import imgUrl from "@img/ines4.jpg?url";
@@ -15,7 +16,7 @@
         <ImageSwitcher images={[imgUrl, imgVernissage, imgSignieren]} />
     {/snippet}
     {#snippet second()}
-        <div class="card-container">
+        <CardContainer gap="lg" marginBlock="2xl">
             <Card>
                 <div slot="header">
                     <span>Freitag, 13. März 2026</span><span>19.30 Uhr</span>
@@ -37,15 +38,8 @@
                     In der GGG Stadtbibliothek im Schmiedenhof in Basel.
                 </div>
             </Card>
-        </div>
+        </CardContainer>
     {/snippet}
 </TwoCols>
 
-<style>
-    .card-container {
-        display: flex;
-        flex-direction: column;
-        gap: 2rem;
-        margin-block: 3em;
-    }
-</style>
+

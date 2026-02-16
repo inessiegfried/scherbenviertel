@@ -60,8 +60,6 @@
     }
 
     .image-switcher {
-        width: 300px;
-        max-width: 100%;
         overflow: hidden;
         margin: 0 auto;
     }
@@ -75,10 +73,7 @@
     }
     
     .image-container > img {
-        flex: 0 0 300px;
-        width: 300px;
-        max-width: 100%;
-        min-height: 300px;
+        flex: 0 0 100%;
         height: auto;
         object-fit: cover;
         display: block;

@@ -3,7 +3,7 @@
     import TwoCols from "@components/TwoCols.svelte";
 </script>
 
-<TwoCols id="home" title="Ines Siegfried" breakout={true}>
+<TwoCols id="home" title="Ines Siegfried" breakout={true} fullHeight={true}>
     {#snippet first()}
         <div class="wide img-wrapper">
             <img src={imgUrl} alt="Bild der Authorin" />
@@ -19,16 +19,13 @@
 
 <style>
     :global(#home.two-cols) {
-        height: calc(100dvh - var(--header-height)) !important;
-        min-height: calc(100dvh - var(--header-height)) !important;
-        max-height: calc(100dvh - var(--header-height)) !important;
-        align-items: center !important;
+        align-items: center;
     }
     
     :global(#home.two-cols .first-col) {
-        position: static !important;
-        margin-block: 0 !important;
-        align-self: center !important;
+        position: static;
+        margin-block: 0;
+        align-self: center;
     }
 
     .img-wrapper {

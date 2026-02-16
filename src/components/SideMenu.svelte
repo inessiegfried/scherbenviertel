@@ -43,7 +43,7 @@
 <style>
     aside {
         background-color: var(--base-color-darker);
-        padding: 1rem 2rem 1rem 1rem;
+        padding: var(--space-sm) var(--space-lg) var(--space-sm) var(--space-sm);
         container-name: sidemenu;
         container-type: inline-size;
         height: 100%;
@@ -57,7 +57,7 @@
         align-items: flex-start;
         justify-content: center;
         height: 100%;
-        gap: 0.5rem;
+        gap: var(--space-2xs);
         list-style: none;
         padding: 0;
     }
@@ -65,7 +65,7 @@
     #menu > li > a {
         color: var(--white);
         text-decoration: none;
-        transition: color 0.3s;
+        transition: color var(--transition-base);
     }
 
     #menu > li > a:hover {

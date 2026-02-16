@@ -13,7 +13,7 @@
 
     .card {
         padding: 0;
-        box-shadow: 6px 3px 12px var(--teal);
+        box-shadow: var(--shadow-teal);
         transition: box-shadow 400ms ease;
     }
 
@@ -28,18 +28,18 @@
         color: var(--yellow);
         margin: 0;
         background-color: hsl(from var(--teal) h s l / 0.2);
-        padding: 0.25em 1em;
+        padding: var(--space-3xs) var(--space-sm);
     }
 
     :global([slot="body"]) {
-        padding: 1em;
+        padding: var(--space-sm);
     }
 
     /* Responsive Card Header für kleine Container */
     @container card (max-width: 640px) {
         :global([slot="header"]) {
             flex-direction: column;
-            gap: 0.5rem;
+            gap: var(--space-2xs);
             align-items: flex-start;
         }
     }

@@ -10,13 +10,13 @@
         flex-direction: row;
         justify-content: center;
         align-items: center;
-        padding: 0.5rem;
+        padding: var(--space-2xs);
     }
 
     a {
         color: var(--title-color);
         text-decoration: none;
-        transition: color 0.3s;
+        transition: color var(--transition-base);
     }
 
     a:hover {

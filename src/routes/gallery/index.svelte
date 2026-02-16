@@ -23,21 +23,21 @@
         width: 100%;
         height: 100%;
         object-fit: cover;
-        transition: scale 400ms ease;
+        transition: scale var(--transition-slow);
     }
     .gallery {
-        margin-block: 2rem;
+        margin-block: var(--space-lg);
         width: 100%;
         justify-content: center;
         display: grid;
         grid-template-columns: repeat(3, 200px);
         /*grid-auto-rows: 250px;*/
-        gap: 1rem;
+        gap: var(--space-sm);
     }
 
     .img-wrapper {
         overflow: hidden;
-        border-radius: 1rem;
+        border-radius: var(--space-sm);
         aspect-ratio: 1 / 1;
     }
 

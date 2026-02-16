@@ -36,7 +36,7 @@
         grid-template-columns: 1fr 0;
         height: 100dvh;
         overflow: hidden;
-        transition: grid-template-columns 0.3s ease;
+        transition: grid-template-columns var(--transition-base);
     }
     
     /* Wenn Menu offen ist, ändert sich das Grid */

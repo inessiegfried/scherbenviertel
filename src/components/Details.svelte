@@ -45,8 +45,8 @@
 
 <style>
     details {
-        width: min(720px, 100%);
-        box-shadow: 6px 3px 12px var(--teal);
+        width: 100%;
+        box-shadow: var(--shadow-teal);
         transition: box-shadow 400ms ease;
     }
 
@@ -60,7 +60,7 @@
         color: var(--yellow);
         background-color: hsl(from var(--teal) h s l / 0.2);
         width: 100%;
-        padding-left: 1em;
+        padding-left: var(--space-sm);
     }
 
     :global(summary::marker) {
@@ -68,6 +68,6 @@
     }
 
     :global(details > section) {
-        padding: 1em;
+        padding: var(--space-sm);
     }
 </style>

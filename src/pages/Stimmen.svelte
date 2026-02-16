@@ -1,5 +1,6 @@
 <script>
     import Card from "@components/Card.svelte";
+    import CardContainer from "@components/CardContainer.svelte";
     import TwoCols from "@components/TwoCols.svelte";
     import data from "/public/data/stimmen.json";
 
@@ -17,7 +18,7 @@
             <img src={imgUrl} alt="Bild einer Rezension" />
     {/snippet}
     {#snippet second()}
-        <div class="card-container">
+        <CardContainer gap="lg" marginBlock="2xl">
             {#each data as entry}
                 <Card>
                     <div slot="header">
@@ -51,18 +52,11 @@
         </div>
 
       </Card>
-        </div>
+        </CardContainer>
     {/snippet}
 </TwoCols>
 
 <style>
-    .card-container {
-        display: flex;
-        flex-direction: column;
-        gap: 2rem;
-        margin-block: 3em;
-    }
-
     .msg-body > p {
       margin-block: 0;
     }
