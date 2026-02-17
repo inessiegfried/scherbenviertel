@@ -21,5 +21,9 @@
 
 <style>
 
+:global(#home) {
+  grid-template-columns: 1fr 1fr;
+}
+
 
 </style>
