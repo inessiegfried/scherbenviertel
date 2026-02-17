@@ -46,21 +46,10 @@
 
     .first-col {
         position: relative;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        /* TODO: Fix this line!!! */
-        align-items: center;
         width: 75%;
         margin-inline: auto;
     }
 
-    .first-col > .content {
-      position: absolute;
-      top: calc((100dvh - var(--header-height)) / 2);
-      transform: translateY(-50%);
-
-    }
 
     .second-col {
         display: flex;
@@ -78,6 +67,14 @@
     }
 
     @container two-cols (min-width: 768px) {
+
+
+    .first-col > .content {
+      position: sticky;
+      margin-top: calc((100dvh - var(--header-height)) / 2);
+      top: calc((100dvh - var(--header-height)) / 2);
+      transform: translateY(-50%);
+    }
 
       :global(section:nth-child(even)) .two-cols {
         grid-template-columns: 2fr 1fr;

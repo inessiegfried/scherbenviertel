@@ -21,9 +21,12 @@
 
 <style>
 
+    @container two-cols (min-width: 768px) {
+
 :global(#home) {
   grid-template-columns: 1fr 1fr;
 }
+    }
 
 
 </style>
