@@ -114,6 +114,10 @@
         &:has(.sticky-col) {
           justify-content: flex-start;
       }
+
+      & > .content {
+        width: 100%;
+      }
     }
 
 
