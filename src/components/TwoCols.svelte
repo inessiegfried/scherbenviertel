@@ -20,7 +20,11 @@
         data-title-main={titleMain}
         data-title-sub={titleSub}
     >
-        <div class="first-col">{@render first?.()}</div>
+        <div class="first-col">
+          <div class="content">
+            {@render first?.()}
+          </div>
+        </div>
         <div class="second-col">{@render second?.()}</div>
     </div>
 </div>
@@ -41,14 +45,21 @@
     }
 
     .first-col {
+        position: relative;
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
         /* TODO: Fix this line!!! */
-        margin-top: calc((100dvh - var(--header-height)) / 2 - 200px);
         align-items: center;
         width: 75%;
         margin-inline: auto;
+    }
+
+    .first-col > .content {
+      position: absolute;
+      top: calc((100dvh - var(--header-height)) / 2);
+      transform: translateY(-50%);
+
     }
 
     .second-col {
