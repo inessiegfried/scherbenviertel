@@ -35,7 +35,12 @@
                     >
                 </div>
                 <div slot="body">
+                    <p>
                     In der GGG Stadtbibliothek im Schmiedenhof in Basel.
+                    </p>
+                    <a
+            href="https://www.stadtbibliothekbasel.ch/de/ines-siegfried-scherbenviertel-_content---1--1007--3852.html"
+            target="_blank">Link zur Veranstaltung</a>
                 </div>
             </Card>
         </CardContainer>
