@@ -9,10 +9,68 @@
         breakout = false,
         fullHeight = false
     } = $props();
+
+    // Bindings und State
+    let twoColsElement = $state(null);
+    let contentElement = $state(null);
+    let shouldBeSticky = $state(false);
+
+    // Effect für Höhenprüfung mit ResizeObserver und Window Resize
+    $effect(() => {
+        if (!twoColsElement) return;
+
+        let resizeTimeout;
+
+        function checkHeight() {
+            // Header-Höhe aus CSS-Variable auslesen
+            const headerHeight = parseInt(
+                getComputedStyle(document.documentElement)
+                    .getPropertyValue('--header-height')
+            ) || 59;
+
+            // Höhe des two-cols Container messen (bestimmt durch scrollenden Content)
+            const twoColsHeight = twoColsElement.offsetHeight;
+            const availableHeight = window.innerHeight - headerHeight;
+
+            // Wenn two-cols höher ist als verfügbare Höhe, dann sticky aktivieren
+            shouldBeSticky = twoColsHeight > availableHeight;
+        }
+
+        // Debounced version für Window Resize
+        function debouncedCheckHeight() {
+            clearTimeout(resizeTimeout);
+            resizeTimeout = setTimeout(checkHeight, 150);
+        }
+
+        // ResizeObserver für Content-Größenänderungen (nicht debounced)
+        const resizeObserver = new ResizeObserver(() => {
+            checkHeight();
+        });
+
+        resizeObserver.observe(twoColsElement);
+
+        // Window Resize für Viewport-Änderungen (debounced)
+        window.addEventListener('resize', debouncedCheckHeight);
+
+        // Initiale Prüfung
+        checkHeight();
+
+        // Initial Delay für nachgeladene Bilder/Fonts
+        const delayedCheck = setTimeout(checkHeight, 500);
+
+        // Cleanup
+        return () => {
+            resizeObserver.disconnect();
+            window.removeEventListener('resize', debouncedCheckHeight);
+            clearTimeout(resizeTimeout);
+            clearTimeout(delayedCheck);
+        };
+    });
 </script>
 
 <div class="two-cols-container">
     <div
+        bind:this={twoColsElement}
         {id}
         class={breakout ? "two-cols breakout" : "two-cols"}
         class:full-height={fullHeight}
@@ -21,7 +79,7 @@
         data-title-sub={titleSub}
     >
         <div class="first-col">
-          <div class="content">
+          <div class="content" class:sticky-col={shouldBeSticky} bind:this={contentElement}>
             {@render first?.()}
           </div>
         </div>
@@ -40,7 +98,7 @@
         display: grid;
         scroll-snap-align: start;
         width: 100%;
-      grid-template-columns: 1fr 2fr;
+        grid-template-columns: 1fr 2fr;
         min-height: calc(100dvh - var(--header-height));
     }
 
@@ -48,16 +106,24 @@
         position: relative;
         width: 75%;
         margin-inline: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        &:has(.sticky-col) {
+          justify-content: flex-start;
+      }
     }
 
 
     .second-col {
         display: flex;
         flex-direction: column;
-      justify-content: center;
-      align-items: center;
+        justify-content: center;
+        align-items: center;
         width: 66%;
-      margin-inline: auto;
+        margin-inline: auto;
     }
     
 
@@ -69,7 +135,7 @@
     @container two-cols (min-width: 768px) {
 
 
-    .first-col > .content {
+    .first-col > .content.sticky-col {
       position: sticky;
       margin-top: calc((100dvh - var(--header-height)) / 2);
       top: calc((100dvh - var(--header-height)) / 2);
