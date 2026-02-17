@@ -10,35 +10,16 @@
         </div>
     {/snippet}
     {#snippet second()}
+      <section>
         <p class="italic">
             Nichts Schönres unter der Sonne als unter der Sonne zu sein.
         </p>
         <p>Ingeborg Bachmann</p>
+      </section>
     {/snippet}
 </TwoCols>
 
 <style>
-    :global(#home.two-cols) {
-        align-items: center;
-    }
-    
-    :global(#home.two-cols .first-col) {
-        position: static;
-        margin-block: 0;
-        align-self: center;
-    }
 
-    .img-wrapper {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
 
-    .img-wrapper > img {
-        width: clamp(240px, 100%, 840px);
-        min-height: 400px;
-        object-fit: cover;
-        object-position: center;
-    }
 </style>
