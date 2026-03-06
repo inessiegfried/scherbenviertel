@@ -23,8 +23,8 @@
             Kopf.
         </p>
         <p>
-            Die historische Erzählung SCHERBENVIERTEL ist soeben im eFeF-Verlag
-            erschienen.
+            Die historische Erzählung SCHERBENVIERTEL ist im Herbst 2025 im
+            eFeF-Verlag erschienen.
         </p>
     {/snippet}
 </TwoCols>
