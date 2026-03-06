@@ -27,6 +27,13 @@
   },
   {
     "msg": [
+      "Die Geschichte Deiner Vorfahren ist beeindruckend, Du schilderst ihre schwierigen Lebensumstände sehr anschaulich. Die Figuren kommen einem nahe."
+    ],
+    "greetings": "Ich gratuliere Dir zu diesem gelungenen Buch.",
+    "author": "Martina Kuoni, Moderatorin und Literaturvermittlerin, Literaturspur"
+  },
+  {
+    "msg": [
       "Ich hab eben dein Scherbenviertel fertig  gelesen - sehr schön! Eine bewegende Geschichte! Weiter so!"
     ],
     "author": "Benedetto Vigne, Autor, Musiker, Journalist"
