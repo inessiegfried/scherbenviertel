@@ -4,7 +4,7 @@
     import TwoCols from "@components/TwoCols.svelte";
     import data from "/public/data/stimmen.json";
 
-    import imgUrl from "@img/Rezension.jpg?url";
+    import imgUrl from "@img/Rezension-Linsmayer.jpg?url";
 </script>
 
 <TwoCols 
@@ -15,7 +15,9 @@
     breakout={true}
 >
     {#snippet first()}
+      <a target="_blank" href={imgUrl}>
             <img src={imgUrl} alt="Bild einer Rezension" />
+      </a>
     {/snippet}
     {#snippet second()}
         <CardContainer gap="lg" marginBlock="2xl">

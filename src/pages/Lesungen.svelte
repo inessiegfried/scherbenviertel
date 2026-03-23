@@ -1,5 +1,5 @@
 <script>
-import FlyerKeller from "@pdfs/Flyer-keller.pdf?url";
+import FlyerUmbruch from "@pdfs/Flyer-Umbruch.pdf?url";
 import Card from "@components/Card.svelte";
 import CardContainer from "@components/CardContainer.svelte";
 import TwoCols from "@components/TwoCols.svelte";
@@ -17,17 +17,6 @@ import ImageSwitcher from "../components/ImageSwitcher.svelte";
   {/snippet}
   {#snippet second()}
     <CardContainer gap="lg" marginBlock="2xl">
-      <Card>
-        <div slot="header">
-          <span>Freitag, 13. März 2026</span><span>19.30 Uhr</span>
-        </div>
-        <div slot="body">
-          <p>In der Zunft zur fünften Jahreszeit in Bern.</p>
-          <div>
-            <a href={FlyerKeller} target="_blank">Flyer</a>
-          </div>
-        </div>
-      </Card>
 
       <Card>
         <div slot="header">
@@ -57,6 +46,17 @@ import ImageSwitcher from "../components/ImageSwitcher.svelte";
             target="_blank">Link zur Veranstaltung</a>
         </div>
 
+      </Card>
+      <Card>
+        <div slot="header">
+          <span>Sonntag, 17. Mai 2026</span><span>17.30 Uhr</span>
+        </div>
+        <div slot="body">
+          <p>Bei "Wort für Wort in einem Zug" in Bubendorf.</p>
+          <div>
+            <a href={FlyerUmbruch} target="_blank">Flyer</a>
+          </div>
+        </div>
       </Card>
     </CardContainer>
   {/snippet}
