@@ -45,6 +45,21 @@ import ImageSwitcher from "../components/ImageSwitcher.svelte";
             href="https://buchhandlung-merkel.de/event/lesung-mit-ines-siegfried-2/"
             target="_blank">Link zur Veranstaltung</a>
         </div>
+      </Card>
+
+      <Card>
+        <div slot="header">
+          <span>Dienstag, 5. Mai 2026</span>
+          <span>19.30 Uhr</span>
+        </div>
+        <div slot="body">
+          <p>
+            Am Literaturfestival LITERATUR IN DER TRAFOHALLE
+          </p>
+          <a
+            href="https://trafohalle.ch/programm/literatur/"
+            target="_blank">Link zur Veranstaltung</a>
+        </div>
 
       </Card>
       <Card>
