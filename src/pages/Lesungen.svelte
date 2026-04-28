@@ -17,36 +17,6 @@ import ImageSwitcher from "../components/ImageSwitcher.svelte";
   {/snippet}
   {#snippet second()}
     <CardContainer gap="lg" marginBlock="2xl">
-
-      <Card>
-        <div slot="header">
-          <span>Donnerstag, 16. April 2026</span><span>18.00 Uhr</span
-          >
-        </div>
-        <div slot="body">
-          <p>
-            In der GGG Stadtbibliothek im Schmiedenhof in Basel.
-          </p>
-          <a
-            href="https://www.stadtbibliothekbasel.ch/de/ines-siegfried-scherbenviertel-_content---1--1007--3852.html"
-            target="_blank">Link zur Veranstaltung</a>
-        </div>
-      </Card>
-      <Card>
-        <div slot="header">
-          <span>Sonntag, 26. April 2026</span>
-          <span>16.00 Uhr</span>
-        </div>
-        <div slot="body">
-          <p>
-            In der Buchhandlung Merkel in Rheinfelden
-          </p>
-          <a
-            href="https://buchhandlung-merkel.de/event/lesung-mit-ines-siegfried-2/"
-            target="_blank">Link zur Veranstaltung</a>
-        </div>
-      </Card>
-
       <Card>
         <div slot="header">
           <span>Dienstag, 5. Mai 2026</span>
