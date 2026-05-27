@@ -125,17 +125,18 @@ import ImageSwitcher from "../components/ImageSwitcher.svelte";
 
   .lesungen-table th:nth-child(1),
   .lesungen-table td:nth-child(1) {
-    width: 30%;
+    width: 22%;
+    white-space: nowrap;
   }
 
   .lesungen-table th:nth-child(2),
   .lesungen-table td:nth-child(2) {
-    width: 45%;
+    width: auto;
   }
 
   .lesungen-table th:nth-child(3),
   .lesungen-table td:nth-child(3) {
-    width: 25%;
+    width: 22%;
     overflow-wrap: break-word;
     word-break: break-word;
   }
