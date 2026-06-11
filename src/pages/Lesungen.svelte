@@ -3,6 +3,7 @@ import FlyerUmbruch from "@pdfs/Flyer-Umbruch.pdf?url";
 import Card from "@components/Card.svelte";
 import CardContainer from "@components/CardContainer.svelte";
 import TwoCols from "@components/TwoCols.svelte";
+import Detail from "@components/Details.svelte";
 
 import imgUrl from "@img/ines4.jpg?url";
 import imgVernissage from "@img/ines-vernissage.jpg?url";
@@ -16,103 +17,120 @@ import ImageSwitcher from "../components/ImageSwitcher.svelte";
     <ImageSwitcher images={[imgUrl, imgVernissage, imgSignieren]} />
   {/snippet}
   {#snippet second()}
-    <h3 class="lesungen-title">Bisherige Lesungen</h3>
-    <div class="lesungen-table-wrapper">
-      <table class="lesungen-table">
-        <thead>
-          <tr>
-            <th>Datum</th>
-            <th>Veranstaltung</th>
-            <th>Ort</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr class="past">
-            <td>17. Oktober 2025</td>
-            <td>Vernissage</td>
-            <td>Allgemeine Lesegesellschaft Basel</td>
-          </tr>
-          <tr class="past">
-            <td>26. Oktober 2025</td>
-            <td>Herbstlese, Neuerscheinungen aus der Region Basel</td>
-            <td></td>
-          </tr>
-          <tr class="past">
-            <td>29. Oktober 2025</td>
-            <td>Jazz und Lesung mit dem Günther-Schürmann Duo</td>
-            <td>Theodorskirche Basel</td>
-          </tr>
-          <tr class="past">
-            <td>19. November 2025</td>
-            <td>Lesung im Bürgerlichen Waisenhaus Basel</td>
-            <td></td>
-          </tr>
-          <tr class="past">
-            <td>25. Januar 2026</td>
-            <td>Lesung mit Gesang des trio someal</td>
-            <td>Buchhandlung Merkel, Grenzach</td>
-          </tr>
-          <tr class="past">
-            <td>29. Januar 2026</td>
-            <td>Lesung in der Rössli Buchhandlung</td>
-            <td>Riehen</td>
-          </tr>
-          <tr class="past">
-            <td>4. Februar 2026</td>
-            <td>Debüt-Abend in der Kantonsbibliothek Baselland</td>
-            <td>Liestal</td>
-          </tr>
-          <tr class="past">
-            <td>26. Februar 2026</td>
-            <td>Lesung und Gespräch an der Merkurstrasse 45</td>
-            <td>Zürich</td>
-          </tr>
-          <tr class="past">
-            <td>3. März 2026</td>
-            <td>Lesung und Gespräch im Wohn- und Pflegezentrum Zum Lamm</td>
-            <td>Basel</td>
-          </tr>
-          <tr class="past">
-            <td>13. März 2026</td>
-            <td>Lesung in der Zunft zur fünften Jahreszeit</td>
-            <td>Bern</td>
-          </tr>
-          <tr class="past">
-            <td>16. April 2026</td>
-            <td>Lesung in der GGG-Stadtbibliothek im Schmiedenhof</td>
-            <td>Basel</td>
-          </tr>
-          <tr class="past">
-            <td>26. April 2026</td>
-            <td>Lesung mit Gesang des trio someal</td>
-            <td>Buchhandlung Merkel, Rheinfelden</td>
-          </tr>
-          <tr class="past">
-            <td>17. Mai 2026</td>
-            <td>Lesung bei Wort für Wort in einem Zug</td>
-            <td>Bubendorf</td>
-          </tr>
-        </tbody>
-      </table>
+    <p class="keine-lesungen">Aktuell sind keine neuen Lesungen geplant.</p>
+    <div class="bisherige-wrapper">
+    <Detail open={false}>
+      {#snippet summary()}
+        <summary>Bisherige Lesungen</summary>
+      {/snippet}
+      {#snippet content()}
+        <div class="lesungen-table-wrapper">
+          <table class="lesungen-table">
+            <thead>
+              <tr>
+                <th>Datum</th>
+                <th>Veranstaltung</th>
+                <th>Ort</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>17. Oktober 2025</td>
+                <td>Vernissage</td>
+                <td>Allgemeine Lesegesellschaft Basel</td>
+              </tr>
+              <tr>
+                <td>26. Oktober 2025</td>
+                <td>Herbstlese, Neuerscheinungen aus der Region Basel</td>
+                <td>Allgemeine Lesegesellschaft Basel</td>
+              </tr>
+              <tr>
+                <td>29. Oktober 2025</td>
+                <td>Jazz und Lesung mit dem Günther-Schürmann Duo</td>
+                <td>Theodorskirche Basel</td>
+              </tr>
+              <tr>
+                <td>19. November 2025</td>
+                <td>Lesung vor Ort</td>
+                <td>Bürgerliches Waisenhaus Basel</td>
+              </tr>
+              <tr>
+                <td>25. Januar 2026</td>
+                <td>Lesung mit Gesang des trio someal</td>
+                <td>Buchhandlung Merkel, Grenzach</td>
+              </tr>
+              <tr>
+                <td>29. Januar 2026</td>
+                <td>Lesung in der Rössli Buchhandlung</td>
+                <td>Riehen</td>
+              </tr>
+              <tr>
+                <td>4. Februar 2026</td>
+                <td>Debüt-Abend in der Kantonsbibliothek Baselland</td>
+                <td>Liestal</td>
+              </tr>
+              <tr>
+                <td>26. Februar 2026</td>
+                <td>Lesung und Gespräch an der Merkurstrasse 45</td>
+                <td>Zürich</td>
+              </tr>
+              <tr>
+                <td>3. März 2026</td>
+                <td>Lesung und Gespräch im Wohn- und Pflegezentrum Zum Lamm</td>
+                <td>Basel</td>
+              </tr>
+              <tr>
+                <td>13. März 2026</td>
+                <td>Lesung in der Zunft zur fünften Jahreszeit</td>
+                <td>Bern</td>
+              </tr>
+              <tr>
+                <td>16. April 2026</td>
+                <td>Lesung in der GGG-Stadtbibliothek im Schmiedenhof</td>
+                <td>Basel</td>
+              </tr>
+              <tr>
+                <td>26. April 2026</td>
+                <td>Lesung mit Gesang des trio someal</td>
+                <td>Buchhandlung Merkel, Rheinfelden</td>
+              </tr>
+              <tr>
+                <td>17. Mai 2026</td>
+                <td>Lesung bei Wort für Wort in einem Zug</td>
+                <td>Bubendorf</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      {/snippet}
+    </Detail>
     </div>
   {/snippet}
 </TwoCols>
 
 <style>
-  .lesungen-title {
-    color: var(--yellow);
-    font-size: var(--font-size-lg);
-    font-weight: 600;
-    margin-block-end: var(--space-sm);
-    text-align: center;
+  :global(#lesungen .second-col) {
+    width: 90%;
+  }
+
+  .keine-lesungen {
+    font-size: var(--font-size-base);
+    color: var(--white, #fff);
+    margin-block-end: var(--space-lg);
+  }
+
+  .bisherige-wrapper {
     width: 100%;
+  }
+
+  .bisherige-wrapper :global(summary) {
+    font-size: 1em;
+    font-weight: 400;
   }
 
   .lesungen-table-wrapper {
     container-type: inline-size;
     container-name: lesungen;
-    margin-block: var(--space-lg);
-    box-shadow: var(--shadow-teal);
     width: 100%;
   }
 
@@ -172,14 +190,6 @@ import ImageSwitcher from "../components/ImageSwitcher.svelte";
 
   .lesungen-table tbody tr:hover {
     background-color: hsl(from var(--teal) h s l / 0.08);
-  }
-
-  .lesungen-table tbody tr.past td {
-    opacity: 0.55;
-  }
-
-  .lesungen-table tbody tr.past:hover td {
-    opacity: 0.8;
   }
 
   /* Responsive: schmale Container → gestapelte Zeilen */
