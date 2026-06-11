@@ -17,7 +17,7 @@ import ImageSwitcher from "../components/ImageSwitcher.svelte";
     <ImageSwitcher images={[imgUrl, imgVernissage, imgSignieren]} />
   {/snippet}
   {#snippet second()}
-    <p class="keine-lesungen">Aktuell sind keine neuen Lesungen geplant.</p>
+    <p class="keine-lesungen">Weitere Lesungen sind in Planung.</p>
     <div class="bisherige-wrapper">
     <Detail open={false}>
       {#snippet summary()}
