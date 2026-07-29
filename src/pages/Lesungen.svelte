@@ -17,7 +17,37 @@ import ImageSwitcher from "../components/ImageSwitcher.svelte";
     <ImageSwitcher images={[imgUrl, imgVernissage, imgSignieren]} />
   {/snippet}
   {#snippet second()}
-    <p class="keine-lesungen">Weitere Lesungen sind in Planung.</p>
+    <CardContainer>
+      <Card>
+        <div slot="header">
+          <span>Freitag, 4. September 2026</span>
+          <span>19:00 Uhr</span>
+        </div>
+        <div slot="body">
+          <p>Im Pulpo, Oberer Rheinweg 89, Basel</p>
+        </div>
+      </Card>
+      <Card>
+        <div slot="header">
+          <span>Samstag, 25. Oktober 2026</span>
+          <span>16:30 Uhr</span>
+        </div>
+        <div slot="body">
+          <p>In der LesBar am Buch- und Literaturfestival Zürich liest, Pestalozzi-Bibliothek, Zähringerstrasse 17, Zürich</p>
+        </div>
+      </Card>
+      <Card>
+        <div slot="header">
+          <span>Samstag, 21. November 2026</span>
+          <span>18:00 Uhr</span>
+        </div>
+        <div slot="body">
+          <p>Mit musikalischer Kommentierung durch das trio <span
+            class="italic">someāl</span> im Evangelischen Gemeindehaus in Bad Säckingen </p>
+        </div>
+      </Card>
+    </CardContainer>
+    <!-- <p class="keine-lesungen">Weitere Lesungen sind in Planung.</p> -->
     <div class="bisherige-wrapper">
     <Detail open={false}>
       {#snippet summary()}
@@ -121,6 +151,7 @@ import ImageSwitcher from "../components/ImageSwitcher.svelte";
 
   .bisherige-wrapper {
     width: 100%;
+    margin-bottom: 2rem;
   }
 
   .bisherige-wrapper :global(summary) {
