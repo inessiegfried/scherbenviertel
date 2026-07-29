@@ -6,6 +6,7 @@
     import Gleis12 from "../stories/Gleis12.svelte";
     import Wiederbeleben from "../stories/Wiederbeleben.svelte";
     import DerUnfall from "../stories/DerUnfall.svelte";
+    import Arielle from "../stories/Arielle.svelte";
 
 
     import imgUrl from "@img/Aussicht.jpg?url";
@@ -22,7 +23,8 @@
             <Praepositionen open={false} show={true} />
             <Gleis12 open={false} show={true} />
             <Wiederbeleben open={false} show={true} />
-            <DerUnfall open={true} show={true} />
+            <DerUnfall open={false} show={true} />
+            <Arielle open={true} show={true} />
         </CardContainer>
     {/snippet}
 </TwoCols>
