@@ -1,5 +1,6 @@
 <script>
-import FlyerUmbruch from "@pdfs/Flyer-Umbruch.pdf?url";
+import FlyerDobleA from "@pdfs/Flyer-DobleA.pdf?url";
+import FlyerOekolampad from "@pdfs/Flyer-Oekolampad.pdf?url";
 import Card from "@components/Card.svelte";
 import CardContainer from "@components/CardContainer.svelte";
 import TwoCols from "@components/TwoCols.svelte";
@@ -20,20 +21,51 @@ import ImageSwitcher from "../components/ImageSwitcher.svelte";
     <CardContainer>
       <Card>
         <div slot="header">
-          <span>Freitag, 4. September 2026</span>
-          <span>19:00 Uhr</span>
-        </div>
-        <div slot="body">
-          <p>Im Pulpo, Oberer Rheinweg 89, Basel</p>
-        </div>
-      </Card>
-      <Card>
-        <div slot="header">
           <span>Samstag, 25. Oktober 2026</span>
           <span>16:30 Uhr</span>
         </div>
         <div slot="body">
           <p>In der LesBar am Buch- und Literaturfestival Zürich liest, Pestalozzi-Bibliothek, Zähringerstrasse 17, Zürich</p>
+          <p><a
+            href="https://www.zuerich-liest.ch/veranstaltung/lesbar--femscript-autorinnen-stellen-ihre-neuerscheinungen-vor/20261024163000/"
+            target="_blank">Link zur Veranstaltung</a></p>
+        </div>
+      </Card>
+      <Card>
+        <div slot="header">
+          <span>Dienstag, 3. November 2026</span>
+          <span>18:15 Uhr</span>
+        </div>
+        <div slot="body">
+          <p> Öffentliche Buchpräsentation der historischen Erzählung <span
+            class="italic">Scherbenviertel</span> an der Universität Zürich, Rämistrasse 71, Raum KOL-G-209 </p>
+        </div>
+      </Card>
+      <Card>
+        <div slot="header">
+          <span>Dienstag, 5. November 2026</span>
+          <span>19:30 Uhr</span>
+        </div>
+        <div slot="body">
+          <p>Im Quartierzentrum <span class="italic">Oekolampad</span>, Allschwilerplatz 22, Basel</p>
+          <p>
+            Doppellesung und Gespräch zusammen mit Silke Amberg,  veranstaltet von der
+            Buchhandlung <span class="italic">Olymp und Hades</span>
+          </p>
+          <p><a href={FlyerOekolampad} target="_blank">Flyer</a></p>
+        </div>
+      </Card>
+      <Card>
+        <div slot="header">
+          <span>Freitag, 13. November 2026</span>
+          <span>19:00 Uhr</span>
+        </div>
+        <div slot="body">
+          <p>Im Kulturraum Doble A, Elsässerstrasse 8, Basel</p>
+
+          <p>Anlässlich der Ausstellung Spurensuche -  Fotografien und Objekte
+            von Christine Seiler</p>
+          <p><a href={FlyerDobleA} target="_blank">Flyer</a></p>
         </div>
       </Card>
       <Card>
@@ -129,6 +161,14 @@ import ImageSwitcher from "../components/ImageSwitcher.svelte";
                 <td>Lesung bei Wort für Wort in einem Zug</td>
                 <td>Bubendorf</td>
               </tr>
+              <tr>
+                <td>4. September 2026</td>
+                <td>Lesung im Pulpo</td>
+                <td>Basel</td>
+              </tr>
+              <tr>
+                  <td>11. September 2026</td><td>Lesung vor Ort für die MitarbeiterInnen der Bibliothek Reinach</td><td>Bürgerliches Waisenhaus Basel</td> 
+                </tr>
             </tbody>
           </table>
         </div>
