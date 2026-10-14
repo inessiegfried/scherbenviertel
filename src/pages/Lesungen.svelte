@@ -1,6 +1,8 @@
 <script>
 import FlyerDobleA from "@pdfs/Flyer-DobleA.pdf?url";
 import FlyerOekolampad from "@pdfs/Flyer-Oekolampad.pdf?url";
+import FlyerSaekingen from "@pdfs/Flyer-Saeckingen.pdf?url";
+import FlyerZurich from "@pdfs/Flyer-Zurich.pdf?url";
 import Card from "@components/Card.svelte";
 import CardContainer from "@components/CardContainer.svelte";
 import TwoCols from "@components/TwoCols.svelte";
@@ -39,6 +41,7 @@ import ImageSwitcher from "../components/ImageSwitcher.svelte";
         <div slot="body">
           <p> Öffentliche Buchpräsentation der historischen Erzählung <span
             class="italic">Scherbenviertel</span> an der Universität Zürich, Rämistrasse 71, Raum KOL-G-209 </p>
+          <p><a href={FlyerZurich} target="_blank">Flyer</a></p>
         </div>
       </Card>
       <Card>
@@ -76,6 +79,7 @@ import ImageSwitcher from "../components/ImageSwitcher.svelte";
         <div slot="body">
           <p>Mit musikalischer Kommentierung durch das trio <span
             class="italic">someāl</span> im Evangelischen Gemeindehaus in Bad Säckingen </p>
+          <p><a href={FlyerSaekingen} target="_blank">Flyer</a></p>
         </div>
       </Card>
     </CardContainer>
